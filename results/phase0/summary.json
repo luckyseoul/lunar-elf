@@ -1,0 +1,22 @@
+{
+  "optimistic_cold": {
+    "sigma_eff_S_m": 1.2779815466351353e-08,
+    "eps_r_eff": 4.0,
+    "shell_depth_km": 300.0
+  },
+  "nominal": {
+    "sigma_eff_S_m": 1.312274579144282e-07,
+    "eps_r_eff": 5.5,
+    "shell_depth_km": 300.0
+  },
+  "apollo_classic": {
+    "sigma_eff_S_m": 6.257003790878113e-08,
+    "eps_r_eff": 5.0,
+    "shell_depth_km": 300.0
+  },
+  "pessimistic_warm": {
+    "sigma_eff_S_m": 1.2072346875977952e-05,
+    "eps_r_eff": 7.0,
+    "shell_depth_km": 300.0
+  }
+}

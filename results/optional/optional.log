@@ -1,0 +1,22 @@
+[22:42:41] === Optional tasks start ===
+[22:42:41] Saving literature profiles…
+[22:42:41]   grimm_lf_preferred     σ_surf=1.00e-09  σ_300=3.07e-05  σ_400=1.18e-03  σ_800=7.94e-03
+[22:42:41]   grimm_hf_envelope      σ_surf=4.00e-07  σ_300=3.07e-04  σ_400=3.73e-03  σ_800=7.94e-03
+[22:42:41]   mittelholz_like        σ_surf=5.00e-09  σ_300=9.94e-05  σ_400=2.83e-04  σ_800=5.00e-03
+[22:42:41]   hood_upper_resistive   σ_surf=1.00e-09  σ_300=1.00e-06  σ_400=1.00e-05  σ_800=9.99e-04
+[22:42:41]   nearside_warm          σ_surf=5.00e-09  σ_300=8.88e-05  σ_400=2.92e-03  σ_800=7.94e-03
+[22:42:41]   farside_cold           σ_surf=2.00e-10  σ_300=2.09e-05  σ_400=9.93e-04  σ_800=7.94e-03
+[22:42:41]   pkt                    σ_surf=1.18e-08  σ_300=5.44e-04  σ_400=6.87e-03  σ_800=7.94e-03
+[22:42:41] Literature profiles done
+[22:42:41] Eigenmode suite…
+[22:42:42]   eigen grimm_lf_preferred: n=1 Q=0.781, n=2 Q=0.642, n=3 Q=0.452
+[22:42:42]   eigen grimm_hf_envelope: n=1 Q=1.11, n=2 Q=1.32, n=3 Q=1.47
+[22:42:42]   eigen mittelholz_like: n=1 Q=1.08, n=2 Q=1.08, n=3 Q=0.991
+[22:42:42]   eigen hood_upper_resistive: n=1 Q=0.494, n=2 Q=0.339, n=3 Q=0.197
+[22:42:42]   eigen farside_cold: n=1 Q=0.828, n=2 Q=0.662, n=3 Q=0.431
+[22:42:42]   eigen pkt: n=1 Q=0.936, n=2 Q=0.926, n=3 Q=0.864
+[22:42:42]   eigen nearside_warm: n=1 Q=0.776, n=2 Q=0.694, n=3 Q=0.57
+[22:42:43] Eigenmodes done
+[22:42:43] Lateral suite…
+[22:42:44] Lateral done
+[22:42:44] === COMPLETE in 2.9s ===

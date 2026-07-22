@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+dist/
+build/
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Local run artifacts (regenerate with scripts)
+logs/
+results/campaign/campaign.pid
+results/campaign/campaign.log
+results/**/progress.json
+
+# Large regenerated Monte Carlo tables (keep summaries; regenerate with 05_heavy_campaign.py)
+results/campaign/mc_q.csv
+results/campaign/path_attenuation.csv
+results/campaign/qf_summary.csv
+
+# OS / editor
+.DS_Store
+*~
+*.swp
+
+# Optional local PDF intermediates
+paper/paper_print.html

@@ -1,0 +1,297 @@
+{
+  "columns": {
+    "grimm_lf_preferred": {
+      "name": "grimm_lf_preferred",
+      "Q_n1": 0.7814327698118186,
+      "Re_Zg": 15.70502617843407,
+      "sigma_eff": 1.3796683511959035e-07,
+      "att_90deg_10Hz_db": 55.32242650392068
+    },
+    "nearside_warm": {
+      "name": "nearside_warm",
+      "Q_n1": 0.775582070305773,
+      "Re_Zg": 15.853040645178199,
+      "sigma_eff": 5.200865407101847e-07,
+      "att_90deg_10Hz_db": 107.41172145593335
+    },
+    "farside_cold": {
+      "name": "farside_cold",
+      "Q_n1": 0.8284013264147401,
+      "Re_Zg": 14.59255040838982,
+      "sigma_eff": 5.730708918751646e-08,
+      "att_90deg_10Hz_db": 35.65480326289048
+    },
+    "pkt": {
+      "name": "pkt",
+      "Q_n1": 0.9361669634913009,
+      "Re_Zg": 12.461950245760178,
+      "sigma_eff": 3.2283485728086345e-06,
+      "att_90deg_10Hz_db": 267.61107323721313
+    }
+  },
+  "paths": {
+    "global_90_1Hz": {
+      "f_hz": 1.0,
+      "total_att_db": 17.494487343965538,
+      "segments": [
+        {
+          "profile": "grimm_lf_preferred",
+          "angle_deg": 90.0,
+          "att_db": 17.494487343965538,
+          "sigma_eff": 1.3796683511959035e-07
+        }
+      ]
+    },
+    "nearside_90_1Hz": {
+      "f_hz": 1.0,
+      "total_att_db": 33.966568720032654,
+      "segments": [
+        {
+          "profile": "nearside_warm",
+          "angle_deg": 90.0,
+          "att_db": 33.966568720032654,
+          "sigma_eff": 5.200865407101847e-07
+        }
+      ]
+    },
+    "farside_90_1Hz": {
+      "f_hz": 1.0,
+      "total_att_db": 11.275038783593724,
+      "segments": [
+        {
+          "profile": "farside_cold",
+          "angle_deg": 90.0,
+          "att_db": 11.275038783593724,
+          "sigma_eff": 5.730708918751646e-08
+        }
+      ]
+    },
+    "mixed_NS_90_1Hz": {
+      "f_hz": 1.0,
+      "total_att_db": 22.620803751813188,
+      "segments": [
+        {
+          "profile": "nearside_warm",
+          "angle_deg": 45.0,
+          "att_db": 16.983284360016327,
+          "sigma_eff": 5.200865407101847e-07
+        },
+        {
+          "profile": "farside_cold",
+          "angle_deg": 45.0,
+          "att_db": 5.637519391796862,
+          "sigma_eff": 5.730708918751646e-08
+        }
+      ]
+    },
+    "through_PKT_90_1Hz": {
+      "f_hz": 1.0,
+      "total_att_db": 43.2892197849329,
+      "segments": [
+        {
+          "profile": "pkt",
+          "angle_deg": 30.0,
+          "att_db": 28.20868395039077,
+          "sigma_eff": 3.2283485728086345e-06
+        },
+        {
+          "profile": "nearside_warm",
+          "angle_deg": 30.0,
+          "att_db": 11.322189573344216,
+          "sigma_eff": 5.200865407101847e-07
+        },
+        {
+          "profile": "farside_cold",
+          "angle_deg": 30.0,
+          "att_db": 3.758346261197907,
+          "sigma_eff": 5.730708918751646e-08
+        }
+      ]
+    },
+    "global_90_10Hz": {
+      "f_hz": 10.0,
+      "total_att_db": 55.32242650392068,
+      "segments": [
+        {
+          "profile": "grimm_lf_preferred",
+          "angle_deg": 90.0,
+          "att_db": 55.32242650392068,
+          "sigma_eff": 1.3796683511959035e-07
+        }
+      ]
+    },
+    "nearside_90_10Hz": {
+      "f_hz": 10.0,
+      "total_att_db": 107.41172145593335,
+      "segments": [
+        {
+          "profile": "nearside_warm",
+          "angle_deg": 90.0,
+          "att_db": 107.41172145593335,
+          "sigma_eff": 5.200865407101847e-07
+        }
+      ]
+    },
+    "farside_90_10Hz": {
+      "f_hz": 10.0,
+      "total_att_db": 35.65480326289048,
+      "segments": [
+        {
+          "profile": "farside_cold",
+          "angle_deg": 90.0,
+          "att_db": 35.65480326289048,
+          "sigma_eff": 5.730708918751646e-08
+        }
+      ]
+    },
+    "mixed_NS_90_10Hz": {
+      "f_hz": 10.0,
+      "total_att_db": 71.5332623594119,
+      "segments": [
+        {
+          "profile": "nearside_warm",
+          "angle_deg": 45.0,
+          "att_db": 53.70586072796667,
+          "sigma_eff": 5.200865407101847e-07
+        },
+        {
+          "profile": "farside_cold",
+          "angle_deg": 45.0,
+          "att_db": 17.82740163144524,
+          "sigma_eff": 5.730708918751646e-08
+        }
+      ]
+    },
+    "through_PKT_90_10Hz": {
+      "f_hz": 10.0,
+      "total_att_db": 136.8925326520123,
+      "segments": [
+        {
+          "profile": "pkt",
+          "angle_deg": 30.0,
+          "att_db": 89.20369107907104,
+          "sigma_eff": 3.2283485728086345e-06
+        },
+        {
+          "profile": "nearside_warm",
+          "angle_deg": 30.0,
+          "att_db": 35.803907151977775,
+          "sigma_eff": 5.200865407101847e-07
+        },
+        {
+          "profile": "farside_cold",
+          "angle_deg": 30.0,
+          "att_db": 11.884934420963493,
+          "sigma_eff": 5.730708918751646e-08
+        }
+      ]
+    },
+    "global_90_30Hz": {
+      "f_hz": 30.0,
+      "total_att_db": 95.82125350278568,
+      "segments": [
+        {
+          "profile": "grimm_lf_preferred",
+          "angle_deg": 90.0,
+          "att_db": 95.82125350278568,
+          "sigma_eff": 1.3796683511959035e-07
+        }
+      ]
+    },
+    "nearside_90_30Hz": {
+      "f_hz": 30.0,
+      "total_att_db": 186.04255889011264,
+      "segments": [
+        {
+          "profile": "nearside_warm",
+          "angle_deg": 90.0,
+          "att_db": 186.04255889011264,
+          "sigma_eff": 5.200865407101847e-07
+        }
+      ]
+    },
+    "farside_90_30Hz": {
+      "f_hz": 30.0,
+      "total_att_db": 61.7559307851989,
+      "segments": [
+        {
+          "profile": "farside_cold",
+          "angle_deg": 90.0,
+          "att_db": 61.7559307851989,
+          "sigma_eff": 5.730708918751646e-08
+        }
+      ]
+    },
+    "mixed_NS_90_30Hz": {
+      "f_hz": 30.0,
+      "total_att_db": 123.89924483765577,
+      "segments": [
+        {
+          "profile": "nearside_warm",
+          "angle_deg": 45.0,
+          "att_db": 93.02127944505632,
+          "sigma_eff": 5.200865407101847e-07
+        },
+        {
+          "profile": "farside_cold",
+          "angle_deg": 45.0,
+          "att_db": 30.87796539259945,
+          "sigma_eff": 5.730708918751646e-08
+        }
+      ]
+    },
+    "through_PKT_90_30Hz": {
+      "f_hz": 30.0,
+      "total_att_db": 237.1048217300668,
+      "segments": [
+        {
+          "profile": "pkt",
+          "angle_deg": 30.0,
+          "att_db": 154.50532517162964,
+          "sigma_eff": 3.2283485728086345e-06
+        },
+        {
+          "profile": "nearside_warm",
+          "angle_deg": 30.0,
+          "att_db": 62.0141862967042,
+          "sigma_eff": 5.200865407101847e-07
+        },
+        {
+          "profile": "farside_cold",
+          "angle_deg": 30.0,
+          "att_db": 20.585310261732964,
+          "sigma_eff": 5.730708918751646e-08
+        }
+      ]
+    }
+  },
+  "hemispheres": {
+    "nearside_farside": {
+      "f_hz": 38.83792468742084,
+      "Re_Za": 15.853040645178199,
+      "Re_Zb": 14.59255040838982,
+      "Re_Z_eff": 15.22279552678401,
+      "Q_eff": 0.8011220279442133,
+      "Q_a": 0.775582070305773,
+      "Q_b": 0.8284013264147401
+    },
+    "pkt_farside": {
+      "f_hz": 38.83792468742084,
+      "Re_Za": 12.461950245760178,
+      "Re_Zb": 14.59255040838982,
+      "Re_Z_eff": 13.527250327074999,
+      "Q_eff": 0.8789934158265397,
+      "Q_a": 0.9361669634913009,
+      "Q_b": 0.8284013264147401
+    },
+    "global_global": {
+      "f_hz": 38.83792468742084,
+      "Re_Za": 15.70502617843407,
+      "Re_Zb": 15.70502617843407,
+      "Re_Z_eff": 15.70502617843407,
+      "Q_eff": 0.7814327698118186,
+      "Q_a": 0.7814327698118186,
+      "Q_b": 0.7814327698118186
+    }
+  }
+}

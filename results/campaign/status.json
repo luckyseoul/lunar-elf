@@ -1,0 +1,13 @@
+{
+  "status": "done",
+  "elapsed_s": 22.263999938964844,
+  "workers": 80,
+  "mc_draws": 20000,
+  "mc_q_rows": 60000,
+  "iono_rows": 972,
+  "out": "/home/nick/Projects/lunar-elf/results/campaign",
+  "q1_median": 0.7783179518640752,
+  "q1_p95": 1.8461289620431338,
+  "q1_max": 2.0072448966621623,
+  "frac_q_lt_5": 1.0
+}

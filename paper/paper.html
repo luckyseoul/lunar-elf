@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>The Lunar Outer Shell as a Weakly Conducting Medium at Extremely Low Frequencies</title>
+<style>
+  @page {
+    size: A4;
+    margin: 22mm 20mm 22mm 20mm;
+    @bottom-center {
+      content: counter(page);
+      font-family: "Times New Roman", Times, serif;
+      font-size: 10pt;
+    }
+  }
+  html { font-size: 11pt; }
+  body {
+    font-family: "Times New Roman", Times, "Liberation Serif", serif;
+    line-height: 1.35;
+    color: #111;
+    text-align: justify;
+    hyphens: auto;
+  }
+  h1.title {
+    font-size: 14.5pt;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1.25;
+    margin: 0 0 14pt 0;
+  }
+  .authors { text-align: center; margin: 0 0 4pt 0; font-size: 11pt; }
+  .affil { text-align: center; font-size: 10pt; margin: 0 0 2pt 0; }
+  .email { text-align: center; font-size: 10pt; margin: 0 0 16pt 0; font-family: monospace; }
+  h2 {
+    font-size: 11.5pt;
+    font-weight: bold;
+    margin: 14pt 0 6pt 0;
+    text-align: left;
+  }
+  h3 {
+    font-size: 11pt;
+    font-weight: bold;
+    font-style: italic;
+    margin: 10pt 0 4pt 0;
+  }
+  p { margin: 0 0 7pt 0; }
+  .abstract-label {
+    text-align: center;
+    font-weight: bold;
+    margin: 8pt 0 6pt 0;
+  }
+  .abstract {
+    margin: 0 12pt 12pt 12pt;
+    font-size: 10.2pt;
+  }
+  ol.method, ul { margin: 4pt 0 8pt 18pt; padding: 0; }
+  li { margin: 2pt 0; }
+  figure {
+    margin: 12pt 0;
+    text-align: center;
+    page-break-inside: avoid;
+  }
+  figure img {
+    max-width: 100%;
+    height: auto;
+    max-height: 95mm;
+  }
+  figcaption {
+    font-size: 9.5pt;
+    text-align: left;
+    margin-top: 4pt;
+    line-height: 1.3;
+  }
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 8pt 0 10pt 0;
+    font-size: 9.5pt;
+    page-break-inside: avoid;
+  }
+  th, td {
+    border: 0.4pt solid #333;
+    padding: 3pt 5pt;
+    text-align: center;
+  }
+  th { background: #f2f2f2; font-weight: bold; }
+  td.left, th.left { text-align: left; }
+  .eq {
+    text-align: center;
+    margin: 8pt 0;
+    font-style: italic;
+  }
+  .eqnum { float: right; font-style: normal; }
+  .refs p {
+    margin: 0 0 5pt 1.2em;
+    text-indent: -1.2em;
+    font-size: 9.5pt;
+  }
+  .note { font-size: 9.5pt; font-style: italic; }
+  .small { font-size: 9.5pt; }
+</style>
+</head>
+<body>
+
+<h1 class="title">The Lunar Outer Shell as a Weakly Conducting,<br/>Large–Skin-Depth Medium at Extremely Low Frequencies</h1>
+
+<p class="authors">Nicholas D. Perry</p>
+<p class="affil">Independent Researcher</p>
+<p class="affil">Council Bluffs, Iowa, USA</p>
+<p class="email">nick@perrybrandsllc.com</p>
+
+<p class="abstract-label">Abstract</p>
+<div class="abstract">
+<p>
+We present a quantitative, observation-based assessment of electromagnetic propagation
+in the outer layers of the Moon at extremely low frequencies (ELF). Continuous
+electrical-conductivity profiles—anchored to Apollo-era and modern magnetic-sounding
+inversions—are used to evaluate skin depth, loss tangent, circumferential path attenuation,
+and global-mode quality factors. At 1–30&nbsp;Hz, literature-bracketed outer-shell conductivities
+yield loss tangents \(\tan\delta=\sigma/(\omega\varepsilon)\gg 1\): conduction current dominates
+displacement current. The outer shell is therefore a <em>weakly conducting medium with large
+skin depth</em>, not a low-loss dielectric. Without a conducting ionosphere there is no closed
+Earth-like Schumann cavity. Even granting a hypothetical 100&nbsp;km ionosphere, impedance-method
+cavity quality factors remain \(Q\lesssim 2\) across named profiles, and a 20&nbsp;000-draw Monte Carlo
+over the conductivity envelope finds median \(Q\simeq 0.78\), 95th percentile \(Q\simeq 1.85\),
+and maximum \(Q\simeq 2.0\) (100% of draws have \(Q&lt;5\)). Nearside–farside and Procellarum KREEP
+Terrane contrasts alter path attenuation but do not create a high-\(Q\) resonator. The method
+supplies a reproducible framework for subsurface ELF assessment on the Moon and other airless bodies.
+</p>
+</div>
+
+<h2>1 Introduction</h2>
+<p>
+Assessing whether a planetary interior can support low-attenuation ELF propagation is a
+recurring problem in planetary geophysics. The Moon is a clean test case: it lacks liquid
+water and a dense atmosphere, and electromagnetic sounding shows its outer layers to be
+highly resistive relative to terrestrial crust. Prior qualitative arguments have sometimes
+described the outer shell as a “low-loss dielectric.” That terminology is tested here against
+published conductivity structure and explicit modal quality-factor estimates.
+</p>
+<p>
+The method is deliberately simple:
+</p>
+<ol class="method">
+  <li>Assemble continuous \(\sigma(r)\) profiles from published magnetic-sounding inversions and literature-bracketed envelopes.</li>
+  <li>Compute skin depth, loss tangent, and path attenuation at ELF.</li>
+  <li>Estimate global-mode quality factors for an open Moon and for a hypothetical closed cavity with an artificial ionosphere.</li>
+  <li>Propagate uncertainty with Monte Carlo draws and assess nearside–farside / PKT lateral contrasts.</li>
+</ol>
+
+<h2>2 Conductivity Structure of the Lunar Outer Shell</h2>
+<p>
+Electrical conductivity of the lunar interior is inferred from magnetic induction in
+time-varying external fields, using dual-spacecraft measurements from Apollo surface
+magnetometers and lunar orbiters (e.g., Explorer&nbsp;35) and, more recently, orbital magnetometer
+inversions. Re-analyses confirm that conductivity is extremely low in the outer few hundred
+kilometers and rises smoothly with depth as temperature increases
+<span class="small">[Sonett et al., 1971; Dyal and Parkin, 1971; Mittelholz et al., 2021; Grimm, 2023]</span>.
+</p>
+<p>
+A preferred one-dimensional construction for this study combines:
+</p>
+<ul>
+  <li>a cold resistive lid consistent with Dyal and Parkin (1977) near-surface bounds
+      (\(\sigma\lesssim 10^{-8}\)&nbsp;S/m for depths \(\lesssim 80\)&nbsp;km);</li>
+  <li>the Grimm (2023) low-frequency (LF) analytic fit valid over \(\sim\)400–1200&nbsp;km,
+      \(\sigma=1.76\times 10^{-4}\,\exp(z_{\mathrm{km}}/210)\)&nbsp;S/m;</li>
+  <li>a log-linear bridge between the lid and the LF band;</li>
+  <li>end-members: a Mittelholz-like global orbital envelope (constructed), a classical
+      Hood-class resistive outer shell, and a Grimm high-frequency (HF) elevated envelope
+      retained only as an upper bound (Grimm argues HF is likely biased high).</li>
+</ul>
+<p>
+There is no sharp step-function boundary: the transition from resistive to more conductive
+rock is continuous. Consequently the outer shell cannot be treated as a homogeneous dielectric
+slab terminated by a perfect conductor.
+</p>
+
+<figure>
+  <img src="../paper_figs/fig_literature_sigma.png" alt="Literature conductivity profiles"/>
+  <figcaption>
+    <strong>Figure 1.</strong> Literature-anchored lunar conductivity profiles used in this study.
+    Solid curves: global 1-D constructions (Grimm LF preferred, HF envelope, Mittelholz-like,
+    Hood-class resistive). Dashed: regional nearside / farside / Procellarum KREEP Terrane (PKT) variants.
+  </figcaption>
+</figure>
+
+<h2>3 Electromagnetic Characteristics at ELF</h2>
+<p>
+At frequencies of a few to a few tens of hertz, the electromagnetic skin depth in the
+good-conductor limit,
+</p>
+<p class="eq">
+  \(\displaystyle \delta=\sqrt{\frac{2}{\omega\mu\sigma}}\,,\)
+  <span class="eqnum">(1)</span>
+</p>
+<p>
+remains on the order of tens to thousands of kilometers within the outer resistive region.
+For \(f=10\)&nbsp;Hz and \(\sigma=10^{-7}\)&nbsp;S/m with \(\mu=\mu_0\), \(\delta\approx 500\)&nbsp;km.
+</p>
+<p>
+The relative magnitude of conduction to displacement current is the loss tangent
+</p>
+<p class="eq">
+  \(\displaystyle \tan\delta=\frac{\sigma}{\omega\varepsilon}\,.\)
+  <span class="eqnum">(2)</span>
+</p>
+<p>
+For lunar rock with \(\varepsilon_r\sim 4\)–7, \(\omega\varepsilon\) is of order \(10^{-9}\)&nbsp;S/m at 10&nbsp;Hz.
+Thus for \(\sigma=10^{-7}\)&nbsp;S/m, \(\tan\delta\sim 30\)–50 \(\gg 1\): conduction current dominates.
+A true low-loss dielectric would require \(\tan\delta\ll 1\), i.e. \(\sigma\ll 10^{-9}\)&nbsp;S/m at 10&nbsp;Hz.
+</p>
+
+<figure>
+  <img src="../paper_figs/fig_loss_tangent.png" alt="Loss tangent"/>
+  <figcaption>
+    <strong>Figure 2.</strong> Loss tangent \(\tan\delta=\sigma/(\omega\varepsilon)\) for outer-shell
+    (0–300&nbsp;km) log-mean conductivity of the synthetic profile suite. Values \(\gg 1\) indicate
+    conduction-dominated (weakly conducting) behavior across 1–100&nbsp;Hz.
+  </figcaption>
+</figure>
+
+<figure>
+  <img src="../paper_figs/fig_skin_depth.png" alt="Skin depth"/>
+  <figcaption>
+    <strong>Figure 3.</strong> ELF skin depth versus frequency for outer-shell effective conductivity.
+    Large \(\delta\) implies low attenuation per kilometer, but a lunar circumference still spans
+    many skin depths for nominal profiles.
+  </figcaption>
+</figure>
+
+<p>
+Table&nbsp;1 summarizes outer-shell metrics for literature constructions at 10&nbsp;Hz.
+Half-circumference field attenuations of tens to hundreds of decibels show that
+shell-guided global standing waves are not viable for nominal and midmantle-resolved profiles.
+</p>
+
+<table>
+  <caption class="small" style="caption-side:bottom; text-align:left; margin-top:3pt;">
+    <strong>Table 1.</strong> Outer-shell (0–300&nbsp;km log-mean) metrics at 10&nbsp;Hz for literature-anchored profiles.
+  </caption>
+  <thead>
+    <tr>
+      <th class="left">Profile</th>
+      <th>\(\sigma_{\mathrm{eff}}\) (S/m)</th>
+      <th>\(\delta\) (km)</th>
+      <th>\(\tan\delta\)</th>
+      <th>\(A_{1/2\mathrm{circ}}\) (dB)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td class="left">Grimm LF preferred</td><td>\(1.4\times 10^{-7}\)</td><td>429</td><td>45</td><td>111</td></tr>
+    <tr><td class="left">Mittelholz-like</td><td>\(1.6\times 10^{-6}\)</td><td>125</td><td>530</td><td>379</td></tr>
+    <tr><td class="left">Hood-class resistive</td><td>\(3.0\times 10^{-8}\)</td><td>917</td><td>9.9</td><td>52</td></tr>
+    <tr><td class="left">Grimm HF envelope</td><td>\(5.7\times 10^{-6}\)</td><td>67</td><td>1850</td><td>710</td></tr>
+  </tbody>
+</table>
+
+<figure>
+  <img src="../paper_figs/fig_path_attenuation.png" alt="Path attenuation"/>
+  <figcaption>
+    <strong>Figure 4.</strong> Circumferential path attenuation (half lunar circumference) for the
+    synthetic profile suite, illustrating strong global-shell damping at ELF for all but the
+    most extremely resistive end-members.
+  </figcaption>
+</figure>
+
+<h2>4 Global Resonances and Quality Factors</h2>
+<p>
+Ideal closed-cavity Schumann frequencies for a sphere of lunar radius \(R\) are
+\(f_n=(c/2\pi R)\sqrt{n(n+1)}\), so \(f_1\approx 38.8\)&nbsp;Hz. The physical Moon has no dense
+conducting ionosphere to form the upper wall of an Earth-like cavity
+<span class="small">(Model A)</span>. Global high-\(Q\) standing waves of the classic Schumann type
+are therefore not supported by geometry alone.
+</p>
+<p>
+To bound residual “would-be” cavity quality even under favorable assumptions, we adopt a
+hypothetical closed cavity <span class="small">(Model B)</span> with a conducting ionosphere at
+height \(h=100\)&nbsp;km. Planetary surface impedance \(Z_g(\omega)\) is computed from a layered
+magnetotelluric-style recursion through \(\sigma(r)\); ionospheric impedance \(Z_i\) is a
+uniform half-space proxy. The cavity quality factor is estimated as
+</p>
+<p class="eq">
+  \(\displaystyle Q\approx\frac{\omega\mu_0 h}{2\,\mathrm{Re}(Z_g+Z_i)}\,.\)
+  <span class="eqnum">(3)</span>
+</p>
+<p>
+An Earth validation stack <span class="small">(Model C)</span> recovers \(Q\sim 4\)–6 for the
+first three multipoles—order-of-magnitude agreement with terrestrial Schumann \(Q\) of a few to ten.
+</p>
+
+<table>
+  <caption class="small" style="caption-side:bottom; text-align:left; margin-top:3pt;">
+    <strong>Table 2.</strong> Model B cavity \(Q\) (artificial 100&nbsp;km ionosphere) at ideal multipole frequencies
+    for literature and regional columns. Primary metric: impedance method (Eq.&nbsp;3).
+  </caption>
+  <thead>
+    <tr>
+      <th class="left">Profile</th>
+      <th>\(Q\) (\(n=1\))</th>
+      <th>\(Q\) (\(n=2\))</th>
+      <th>\(Q\) (\(n=3\))</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td class="left">Grimm LF preferred</td><td>0.78</td><td>0.64</td><td>0.45</td></tr>
+    <tr><td class="left">Mittelholz-like</td><td>1.08</td><td>1.08</td><td>0.99</td></tr>
+    <tr><td class="left">Hood-class resistive</td><td>0.49</td><td>0.34</td><td>0.20</td></tr>
+    <tr><td class="left">Grimm HF envelope</td><td>1.11</td><td>1.32</td><td>1.47</td></tr>
+    <tr><td class="left">Nearside warm</td><td>0.78</td><td>0.69</td><td>0.57</td></tr>
+    <tr><td class="left">Farside cold</td><td>0.83</td><td>0.66</td><td>0.43</td></tr>
+    <tr><td class="left">PKT</td><td>0.94</td><td>0.93</td><td>0.86</td></tr>
+  </tbody>
+</table>
+
+<p>
+Ringing times \(\tau\approx Q/(\pi f_1)\) are a few milliseconds for \(Q\sim 1\) at \(f_1\sim 39\)&nbsp;Hz—orders
+of magnitude too short for a sustained global ring.
+</p>
+
+<figure>
+  <img src="../paper_figs/fig_eigen_Q_literature.png" alt="Q for literature profiles"/>
+  <figcaption>
+    <strong>Figure 5.</strong> Fundamental-mode cavity \(Q\) for literature and regional profiles
+    under Model B (\(h=100\)&nbsp;km). All values remain \(\mathcal{O}(1)\), far below high-\(Q\) resonator behavior.
+  </figcaption>
+</figure>
+
+<h3>4.1 Monte Carlo conductivity envelope</h3>
+<p>
+To avoid reliance on a single \(\sigma(r)\), we draw 20&nbsp;000 synthetic profiles with surface-to-deep
+conductivity hinges spanning optimistic to pessimistic literature bounds, and recompute Model&nbsp;B
+\(Q\) for \(n=1\). Results:
+</p>
+<ul>
+  <li>median \(Q=0.78\);</li>
+  <li>5th / 95th percentiles: \(0.30\) / \(1.85\);</li>
+  <li>maximum \(Q=2.01\);</li>
+  <li><strong>100% of draws have \(Q&lt;5\)</strong>; 65% have \(Q&lt;1\).</li>
+</ul>
+<p>
+No high-\(Q\) island appears in the envelope.
+</p>
+
+<figure>
+  <img src="../paper_figs/fig_mc_Q_hist.png" alt="Monte Carlo Q histogram"/>
+  <figcaption>
+    <strong>Figure 6.</strong> Monte Carlo distribution of Model B fundamental-mode \(Q\)
+    (20&nbsp;000 draws). Median and 95th percentile are marked; the entire support lies well below
+    terrestrial Schumann \(Q\).
+  </figcaption>
+</figure>
+
+<figure>
+  <img src="../paper_figs/fig_mc_Q_vs_sigma.png" alt="Q vs sigma"/>
+  <figcaption>
+    <strong>Figure 7.</strong> Monte Carlo \(Q\) versus outer-shell effective conductivity.
+    More conductive walls lower \(\mathrm{Re}(Z_g)\) and can raise \(Q\) slightly, but values
+    remain \(\lesssim 2\) across the envelope.
+  </figcaption>
+</figure>
+
+<h2>5 Lateral Heterogeneity</h2>
+<p>
+One-dimensional inversions miss nearside–farside structure and the Procellarum KREEP Terrane.
+Regional column variants (warmer nearside, colder farside, PKT-boosted upper mantle) change
+local surface impedance and shell-path attenuation. Two equal-area hemisphere combinations
+yield effective cavity \(Q\sim 0.8\)–0.9—still \(\mathcal{O}(1)\). Piecewise great-circle paths
+at 10&nbsp;Hz give \(\sim\)36&nbsp;dB (farside) to \(\sim\)268&nbsp;dB (PKT) of attenuation over 90°, and
+\(\sim\)137&nbsp;dB on a mixed path through PKT. Lateral contrast modulates transmission but does
+not produce a high-\(Q\) global mode.
+</p>
+
+<figure>
+  <img src="../paper_figs/fig_lateral_paths.png" alt="Lateral path attenuation"/>
+  <figcaption>
+    <strong>Figure 8.</strong> Great-circle path attenuation at 10&nbsp;Hz for global, nearside, farside,
+    mixed, and PKT-crossing segments (90° total arc unless noted in labels).
+  </figcaption>
+</figure>
+
+<figure>
+  <img src="../paper_figs/fig_transfer_vs_angle.png" alt="Angular transfer"/>
+  <figcaption>
+    <strong>Figure 9.</strong> Source–receiver transfer proxy versus angular separation for a
+    nominal outer-shell conductivity (path attenuation plus geometric spreading).
+  </figcaption>
+</figure>
+
+<h2>6 Limitations and Open Questions</h2>
+<ul>
+  <li>Existing conductivity profiles have limited vertical resolution in the uppermost 200–300&nbsp;km;
+      future magnetotelluric-style measurements would tighten the lid.</li>
+  <li>The Mittelholz-like curve is a constructed global envelope consistent with orbital-class
+      midmantle conductivities, not a point digitization of a single published figure.</li>
+  <li>Model B ionospheres are artificial proxies for bounding \(Q\); the physical Moon lacks this wall.</li>
+  <li>Full three-dimensional Maxwell solutions with continuous lateral structure remain future work;
+      the regional path and two-hemisphere estimates bound the effect of first-order asymmetry.</li>
+  <li>Displacement current and vacuum radiation for the open Moon are not treated as a closed
+      eigenvalue problem; Model A is geometric (no cavity), not a leaky-mode catalog.</li>
+</ul>
+
+<h2>7 Conclusion</h2>
+<p>
+Continuous electrical-conductivity profiles derived from Apollo and orbital magnetic sounding,
+together with literature-bracketed envelopes and a 20&nbsp;000-draw Monte Carlo experiment, show that
+the outer several hundred kilometers of the Moon form a <strong>weakly conducting, large-skin-depth
+medium</strong> at ELF—not a low-loss dielectric cavity wall. Loss tangents satisfy \(\tan\delta\gg 1\)
+at 1–30&nbsp;Hz. The absence of a conducting ionosphere precludes a closed Schumann-type cavity;
+even with a hypothetical ionosphere, cavity quality factors remain \(Q\lesssim 2\) across the
+explored envelope. Lateral nearside–farside and PKT structure modulates path attenuation but
+does not enable high-\(Q\) global resonances. The same observation-based template applies to
+other airless bodies.
+</p>
+
+<h2>Acknowledgments</h2>
+<p class="small">
+Quantitative results were produced with the open <code>lunar-elf</code> modeling package
+(layered surface-impedance cavity \(Q\), path integrals, Monte Carlo, and regional path experiments).
+Reproducibility scripts and figures are archived with the project.
+</p>
+
+<h2>References</h2>
+<div class="refs">
+<p>P. Dyal and C. W. Parkin. The Apollo 12 magnetometer experiment: Internal lunar properties from transient and steady magnetic field measurements. <em>Proceedings of the Second Lunar Science Conference</em>, 3:2391–2413, 1971.</p>
+<p>P. Dyal and C. W. Parkin. Electrical conductivity and temperature of the lunar interior from magnetic transient-response measurements. <em>Journal of Geophysical Research</em>, 1977 (near-surface bounds as cited by Grimm, 2023).</p>
+<p>R. E. Grimm. Lunar mantle structure and composition inferred from Apollo 12–Explorer 35 electromagnetic sounding. arXiv:2305.01462; <em>Icarus</em>, 407:115775, 2024.</p>
+<p>L. L. Hood, F. Herbert, and C. P. Sonett. The deep lunar electrical conductivity profile: Structural and thermal inferences. <em>Journal of Geophysical Research</em>, 87(B7):5311–5326, 1982.</p>
+<p>A. Mittelholz et al. The global conductivity structure of the lunar upper and midmantle. <em>Journal of Geophysical Research: Planets</em>, 126(10):e2021JE006980, 2021.</p>
+<p>C. P. Sonett, P. Dyal, C. W. Parkin, D. S. Colburn, J. D. Mihalov, and B. F. Smith. Whole body response of the moon to electromagnetic induction by the solar wind. <em>Science</em>, 172(3980):256–258, 1971.</p>
+</div>
+
+<p class="note" style="margin-top:16pt;">
+Corresponding code and full numerical tables: <code>Projects/lunar-elf/</code>
+(<code>paper/QUANTITATIVE_RESULTS.md</code>, <code>paper/CAMPAIGN_REPORT.md</code>, <code>paper/OPTIONAL_REPORT.md</code>).
+</p>
+
+</body>
+</html>
