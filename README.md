@@ -1,5 +1,10 @@
 # lunar-elf
 
+<p align="center">
+  <img src="logo.png" alt="Lunar ELF EM modeling" width="168" />
+</p>
+
+
 Quantitative ELF electromagnetic modeling of the lunar outer shell, supporting the note:
 
 **The Lunar Outer Shell as a Weakly Conducting, Large–Skin-Depth Medium at Extremely Low Frequencies**
