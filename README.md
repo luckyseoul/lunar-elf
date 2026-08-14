@@ -85,6 +85,36 @@ The outer shell is a **weakly conducting medium with large skin depth**, not a c
 
 ---
 
+## Exploratory Case: Artificial Ionosphere (Model B)
+
+The physical Moon has no stable global ionosphere, so there is no closed Earth-like Schumann cavity (Model A → $Q \equiv 0$).  
+As an exploratory upper-bound exercise we nevertheless imposed a **hypothetical conducting lid at 100 km** (Model B) and recomputed cavity quality factors with the impedance formula
+
+$$
+Q \approx \frac{\omega\mu_0 h}{2\,\mathrm{Re}(Z_g+Z_i)}\,.
+$$
+
+This is the most favorable simple artificial boundary that still respects the measured radial conductivity structure of the outer shell. Even under that assumption:
+
+| Profile | $Q$ (n=1, ~38.8 Hz) | Ringing time $\tau \approx Q/(\pi f)$ |
+|---------|---------------------|--------------------------------------|
+| optimistic_cold | 0.35 | ~3 ms |
+| nominal | 0.58 | ~5 ms |
+| apollo_classic | 0.44 | ~4 ms |
+| pessimistic_warm | 2.01 | ~16 ms |
+
+Monte Carlo (20 000 literature-bracketed $\sigma(r)$ draws under the same artificial lid):
+
+- median $Q \approx 0.78$
+- maximum $Q \approx 2.0$
+- **100 % of draws have $Q < 5$**
+
+Conclusion of the exploratory case: adding an artificial upper wall does not produce a high-$Q$ global resonator. Distributed loss from the continuous conductivity gradient keeps $Q$ of order unity. The physical open-Moon case remains cavity-free.
+
+Sensitivity of the artificial lid height and conductivity is examined in `paper_figs/fig_iono_sensitivity.png` and `results/campaign/iono_sensitivity.csv`.
+
+---
+
 ## Paper & Reports
 
 - **Rendered PDF**: [`paper/Lunar_Outer_Shell_ELF.pdf`](paper/Lunar_Outer_Shell_ELF.pdf)
@@ -101,13 +131,10 @@ The outer shell is a **weakly conducting medium with large skin depth**, not a c
 1. **Phase 0** — Outer-shell $\sigma_{\mathrm{eff}}$, skin depth $\delta=\sqrt{2/\omega\mu\sigma}$, loss tangent $\tan\delta=\sigma/(\omega\varepsilon)$, circumferential path attenuation.
 2. **Phase 1** — Layered surface impedance looking into $\sigma(r)$:
    - **Model A**: open Moon (no ionosphere) → no closed cavity.
-   - **Model B**: artificial ionosphere with
-     $$
-     Q \approx \frac{\omega\mu_0 h}{2\,\mathrm{Re}(Z_g+Z_i)}
-     $$
+   - **Model B**: artificial ionosphere (exploratory upper bound) with the $Q$ formula above.
    - **Model C**: Earth validation smoke test.
 3. **Literature profiles** — Grimm (2023) LF fit $\sigma=1.76\times10^{-4}\exp(z_{\mathrm{km}}/210)$ plus Dyal–Parkin lid; Mittelholz-like global envelope; regional nearside/farside/PKT variants.
-4. **Monte Carlo** — 20 000 literature-bracketed $\sigma(r)$ draws for $Q$ distributions.
+4. **Monte Carlo** — 20 000 literature-bracketed $\sigma(r)$ draws for $Q$ distributions under Model B.
 5. **Lateral** — Piecewise great-circle paths and two-hemisphere effective $Q$.
 
 ---
