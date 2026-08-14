@@ -27,6 +27,30 @@ The outer shell is a **weakly conducting medium with large skin depth**, not a c
 
 ---
 
+## Historical Context: Tesla Planetary-Resonator Framing
+
+This repository grew out of a systematic reverse-engineering of Nikola Tesla’s early planetary-resonator and wireless-power concepts (Earth–ionosphere cavity modes, global standing waves in the ELF band, and related grounded-dielectric waveguide ideas) and their proposed extension to the Moon.
+
+Tesla’s historical claims assumed:
+
+- a conducting lower boundary (Earth’s surface or an equivalent),
+- an insulating volume that could support low-loss propagation,
+- and an upper conducting boundary (the ionosphere) that closed a global cavity capable of high-$Q$ resonance in the ~7–40 Hz range.
+
+On Earth those ingredients exist (with well-documented Schumann resonances). On the Moon they do not. Modern electromagnetic sounding (Apollo-era magnetometer experiments, Grimm 2023 LF inversions, Mittelholz et al. global conductivity structure) shows a continuous, temperature-dependent conductivity gradient in the outer hundreds of kilometers. There is no stable global ionosphere to act as an upper wall, and the outer shell itself is conduction-dominated at ELF ($\tan\delta \gg 1$).
+
+The quantitative work in this repository therefore tests the Tesla-derived framing against the actual lunar conductivity structure:
+
+1. **Model A (physical Moon)** — open upper boundary → no closed cavity.
+2. **Model B (exploratory artificial lid)** — hypothetical conducting boundary at 100 km imposed as an upper-bound experiment → cavity $Q$ remains of order unity (median Monte Carlo $Q \approx 0.78$, maximum $\approx 2$).
+3. Path-integral and lateral experiments — circumferential attenuation of tens to hundreds of dB for literature-bracketed profiles.
+
+**Outcome of the reverse-engineering:** the lunar outer shell does not support the high-$Q$ global ELF modes required by the historical Tesla planetary-resonator architecture. The same calculations show it is a weakly conducting, large-skin-depth medium whose primary scientific value is geophysical (magnetotelluric / induction sounding), not as a planetary waveguide or wireless-power cavity.
+
+The code, profiles, and figures document both the original exploratory motivation and the quantitative constraints that closed that path.
+
+---
+
 ## Key Figures
 
 ### Conductivity Structure
