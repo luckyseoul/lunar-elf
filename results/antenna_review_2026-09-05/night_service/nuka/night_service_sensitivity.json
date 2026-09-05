@@ -1,0 +1,156 @@
+{
+  "status": "SCREENING_ONLY_ASSUMED_DUTY_NOT_ORBIT_AVAILABILITY",
+  "assumptions": {
+    "wavelength_m": 1.064e-06,
+    "range_m": 1000000.0,
+    "transmitter_diameter_m": 1.0,
+    "receiver_diameter_m": 1.5,
+    "constant_load_w": 50.0,
+    "assumed_duty_fraction": 0.1,
+    "storage_round_trip_efficiency": 0.9,
+    "electrical_to_optical_laser_efficiency": 0.4,
+    "optical_to_dc_receiver_efficiency": 0.5,
+    "assumed_usable_storage_specific_energy_wh_per_kg": 150.0,
+    "direct_load_while_beam_present": true,
+    "thermal_allocation": {
+      "receiver": "All captured incident optical power not converted to DC is assumed retained as receiver heat. The computed PV heat is an upper allocation for that remainder: reflection or transmission can lower heat without increasing DC output. Uncaptured beam power is not assigned to receiver heat.",
+      "source": "All laser electrical input not emitted optically is assigned to source heat for the thermal budget."
+    },
+    "source_dc_w_excludes": [
+      "spacecraft platform and pointing power",
+      "optical path and obscuration losses",
+      "cell packing and power management losses",
+      "illumination nonuniformity and thermal derating",
+      "source energy storage and generation losses"
+    ],
+    "optical_model": "Scalar ideal circular aperture, uniform illumination, phase focused at receiver; normal receiver plane; ideal Airy pattern; fixed offset.",
+    "availability_not_modeled": [
+      "orbital trajectory and eclipses",
+      "site terrain and horizon mask",
+      "pointing acquisition time and jitter statistics",
+      "multiuser beam scheduling",
+      "faults and missed passes"
+    ]
+  },
+  "quadrature": {
+    "coarse_radial_nodes": 64,
+    "fine_radial_nodes": 128,
+    "angular_nodes_per_radial_node": 4,
+    "relative_convergence_tolerance": 1e-10,
+    "centered_analytic_tolerance": 1e-12,
+    "centered_analytic_capture_fraction": 0.682762362928548,
+    "centered_analytic_absolute_error": 2.3314683517128287e-15,
+    "maximum_relative_change_n_to_2n": 4.390403351512268e-15
+  },
+  "assumed_service_cycle": {
+    "cycle_hours": 3.0,
+    "on_minutes": 18.000000000000004,
+    "off_minutes": 162.0,
+    "receiver_dc_w_during_on": 550.0,
+    "direct_load_wh_during_on": 15.000000000000002,
+    "storage_input_wh_during_on": 150.00000000000003,
+    "storage_usable_output_wh_during_off": 135.0,
+    "storage_round_trip_loss_wh_per_cycle": 15.000000000000028,
+    "load_wh_per_cycle": 150.0,
+    "energy_balance_absolute_error_wh": 2.842170943040401e-14,
+    "minimum_storage_usable_wh_for_off_interval": 135.0,
+    "minimum_storage_mass_kg_for_off_interval": 0.9,
+    "three_hour_storage_usable_wh": 150.0,
+    "three_hour_storage_mass_kg": 1.0,
+    "whole_night_hours": 354.0,
+    "whole_night_storage_usable_wh": 17700.0,
+    "whole_night_storage_mass_kg": 118.0,
+    "storage_mass_limitation": "Arithmetic using assumed usable Wh/kg; excludes peripherals and any thermal or structural mass outside that assumption.",
+    "thermal_limitation": "On-state laser/PV conservative heat allocations only, with optical absorption assumptions stated above; storage heat location is not assigned because separate charge/discharge efficiencies are unknown."
+  },
+  "offset_sensitivity": [
+    {
+      "fixed_offset_m": 0.0,
+      "fixed_angular_offset_urad": 0.0,
+      "capture_fraction_n": 0.6827623629285486,
+      "capture_fraction_2n": 0.6827623629285456,
+      "quadrature_relative_change": 4.390403351512268e-15,
+      "receiver_dc_w_during_on": 550.0,
+      "source_dc_w_during_on": 4027.755701419354,
+      "transmitted_optical_w_during_on": 1611.1022805677417,
+      "receiver_optical_w_during_on": 1100.0,
+      "source_laser_heat_w_during_on": 2416.6534208516123,
+      "receiver_pv_heat_w_during_on": 550.0,
+      "source_dc_wh_per_assumed_cycle": 1208.3267104258064
+    },
+    {
+      "fixed_offset_m": 0.1,
+      "fixed_angular_offset_urad": 0.1,
+      "capture_fraction_n": 0.6741350551955945,
+      "capture_fraction_2n": 0.6741350551955916,
+      "quadrature_relative_change": 4.281901440636258e-15,
+      "receiver_dc_w_during_on": 550.0,
+      "source_dc_w_during_on": 4079.301289564482,
+      "transmitted_optical_w_during_on": 1631.720515825793,
+      "receiver_optical_w_during_on": 1100.0,
+      "source_laser_heat_w_during_on": 2447.580773738689,
+      "receiver_pv_heat_w_during_on": 550.0,
+      "source_dc_wh_per_assumed_cycle": 1223.7903868693447
+    },
+    {
+      "fixed_offset_m": 0.3,
+      "fixed_angular_offset_urad": 0.3,
+      "capture_fraction_n": 0.608513017511429,
+      "capture_fraction_2n": 0.6085130175114268,
+      "quadrature_relative_change": 3.6489704991538935e-15,
+      "receiver_dc_w_during_on": 550.0,
+      "source_dc_w_during_on": 4519.213099575737,
+      "transmitted_optical_w_during_on": 1807.685239830295,
+      "receiver_optical_w_during_on": 1100.0,
+      "source_laser_heat_w_during_on": 2711.527859745442,
+      "receiver_pv_heat_w_during_on": 550.0,
+      "source_dc_wh_per_assumed_cycle": 1355.7639298727213
+    },
+    {
+      "fixed_offset_m": 0.5,
+      "fixed_angular_offset_urad": 0.5,
+      "capture_fraction_n": 0.4939769826702176,
+      "capture_fraction_2n": 0.4939769826702164,
+      "quadrature_relative_change": 2.4722717250633253e-15,
+      "receiver_dc_w_during_on": 550.0,
+      "source_dc_w_during_on": 5567.061009876902,
+      "transmitted_optical_w_during_on": 2226.824403950761,
+      "receiver_optical_w_during_on": 1100.0,
+      "source_laser_heat_w_during_on": 3340.2366059261412,
+      "receiver_pv_heat_w_during_on": 550.0,
+      "source_dc_wh_per_assumed_cycle": 1670.1183029630708
+    },
+    {
+      "fixed_offset_m": 1.0,
+      "fixed_angular_offset_urad": 1.0,
+      "capture_fraction_n": 0.17335067269638427,
+      "capture_fraction_2n": 0.17335067269638468,
+      "quadrature_relative_change": 2.4016845608878712e-15,
+      "receiver_dc_w_during_on": 550.0,
+      "source_dc_w_during_on": 15863.79768376493,
+      "transmitted_optical_w_during_on": 6345.519073505972,
+      "receiver_optical_w_during_on": 1100.0,
+      "source_laser_heat_w_during_on": 9518.278610258958,
+      "receiver_pv_heat_w_during_on": 550.0,
+      "source_dc_wh_per_assumed_cycle": 4759.13930512948
+    }
+  ],
+  "sources": [
+    {
+      "title": "Power Beaming from Lunar Orbit for Small Science Landers",
+      "url": "https://ntrs.nasa.gov/api/citations/20230018143/downloads/PowerBeamingFromLunarOrbitForSmallScienceLanders.pdf",
+      "use": "Mission comparison only; this script does not reproduce the NASA orbit, beamcraft, or optics model."
+    }
+  ],
+  "provenance": {
+    "created_utc": "2026-09-05T12:50:13.152923+00:00",
+    "runtime_hostname": "NUKA",
+    "platform": "Linux-6.6.87.2-microsoft-standard-WSL2+-x86_64-with-glibc2.43",
+    "python_version": "3.14.4",
+    "numpy_version": "2.3.5",
+    "scipy_version": "1.18.1",
+    "source_file_name": "09_night_service_sensitivity.py",
+    "source_sha256": "d6bebef214baa82670ef8b22da976da73040a9d9f887a878cee499abebd0af6f",
+    "computation_elapsed_seconds": 0.056351966923102736
+  }
+}

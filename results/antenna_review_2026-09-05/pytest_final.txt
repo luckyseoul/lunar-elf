@@ -1,0 +1,9 @@
+xxxxxx.......                                                            [100%]
+=========================== short test summary info ============================
+XFAIL tests/test_adversarial_models.py::test_thin_cavity_q_matches_independent_tem_energy_balance - M2: cavity wall formula omits half the total stored energy
+XFAIL tests/test_adversarial_models.py::test_claimed_path_q_bound_contains_same_material_propagation_ratio - M3: dielectric phase constant cannot upper-bound conductive beta/(2 alpha)
+XFAIL tests/test_adversarial_models.py::test_effective_sigma_invariant_under_exact_profile_resampling - M4: shell log mean weights sample count instead of physical depth
+XFAIL tests/test_adversarial_models.py::test_eigenmode_diagnostic_rejects_unbracketed_scan_endpoint - M1: monotonic wall admittance endpoint is reported as an eigenmode
+XFAIL tests/test_adversarial_models.py::test_amplitude_lorentzian_recovers_known_half_power_q - M5: amplitude FWHM uses half amplitude instead of half power
+XFAIL tests/test_adversarial_models.py::test_cavity_characteristic_responds_to_upper_wall_conductivity - M6: computed ionosphere impedance is unused in characteristic
+7 passed, 6 xfailed in 1.06s

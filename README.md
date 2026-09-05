@@ -26,6 +26,14 @@ power-transfer bounds**. Six strict expected-failure tests document unresolved
 model defects. The audit includes matching numerical replays on soulkiller and
 NUKA. Production calculations and the original manuscript have been preserved.
 
+The [energy-delivery review](paper/ENERGY_DELIVERY_REVIEW_2026-09-05.md) evaluates
+useful received watts: conventional ELF loops, cable distribution, optical and
+microwave beams, short-range inductive charging, and periodic orbital charging
+for far-side instruments during lunar night. It includes independent loop
+integration on Jellyfin and explicit power, storage, aperture and heat budgets.
+The most promising development target is a 50 W night-survival service with
+scheduled optical charging; its orbit availability remains to be established.
+
 ---
 
 ## Headline Results

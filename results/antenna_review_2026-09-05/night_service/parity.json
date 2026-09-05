@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "compared_hosts": [
+    "soulkiller",
+    "NUKA"
+  ],
+  "source_sha256": "d6bebef214baa82670ef8b22da976da73040a9d9f887a878cee499abebd0af6f",
+  "numeric_sections_identical": [
+    "assumptions",
+    "quadrature",
+    "assumed_service_cycle",
+    "offset_sensitivity"
+  ],
+  "maximum_absolute_capture_difference": 0.0,
+  "artifacts_sha256": {
+    "local/night_service_sensitivity.json": "0bbd845945391b8a2f736e0960497213ec2200f362315fda024efce1fda6190d",
+    "nuka/night_service_sensitivity.json": "7932b7267e0137568779a1362ad5afeb06534118c720e841243c8b10fa3786c2",
+    "local/offset_sensitivity.csv": "52f5a65a7043d668614b0bc59a06ce3536ff8f333e6a01a6265a1a6e0135cfe5",
+    "nuka/offset_sensitivity.csv": "52f5a65a7043d668614b0bc59a06ce3536ff8f333e6a01a6265a1a6e0135cfe5"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "status": "PASS",
+  "scope": "Arithmetic, retained artifact provenance, cross-node parity and scientific limiting-case tests; no lunar hardware or orbit validation",
+  "hosts": {
+    "model": [
+      "soulkiller",
+      "NUKA"
+    ],
+    "finite_loop": [
+      "jellyfin"
+    ],
+    "night_service": [
+      "soulkiller",
+      "NUKA"
+    ]
+  },
+  "trade_counts": {
+    "loops": 1320,
+    "beams": 131,
+    "cables": 15,
+    "storage": 32
+  },
+  "max_loop_energy_balance_error_w": 2.3942446535223745e-14,
+  "max_finite_loop_quadrature_relative_change": 2.5272092940129052e-14,
+  "night_quadrature_relative_change": 4.390403351512268e-15,
+  "tests": {
+    "passed": 7,
+    "strict_expected_failures": 6,
+    "expected_failures_status": "Historical production defects remain unrepaired; see audit"
+  },
+  "new_script_sha256": {
+    "scripts/07_antenna_energy_trade.py": "18c626a510bdd0649efa2b538f82967cb77b3b506a550a14048af5b4fd47780d",
+    "scripts/08_loop_quadrature_check.py": "388e61f889be8017266b1914db94a8ea52ec9cba356ec12d80bc4f6829a7e5be",
+    "scripts/09_night_service_sensitivity.py": "d6bebef214baa82670ef8b22da976da73040a9d9f887a878cee499abebd0af6f"
+  }
+}

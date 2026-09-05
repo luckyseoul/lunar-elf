@@ -1,0 +1,70 @@
+{
+  "host": "jellyfin",
+  "platform": "Linux-7.0.0-30-generic-x86_64-with-glibc2.43",
+  "python": "3.14.4",
+  "numpy": "2.3.5",
+  "script_sha256": "388e61f889be8017266b1914db94a8ea52ec9cba356ec12d80bc4f6829a7e5be",
+  "model": "vacuum quasistatic exact circular filaments; tuned two-port;100W input,10Hz,2.5mm2 copper",
+  "rows": [
+    {
+      "tx_radius_m": 100,
+      "rx_radius_m": 100,
+      "distance_m": 1000,
+      "mutual_256_h": -1.0097623953420433e-07,
+      "mutual_512_h": -1.0097623953420446e-07,
+      "dipole_mutual_h": -9.869604401089357e-08,
+      "quadrature_relative_change": 1.310693472236633e-15,
+      "dipole_relative_error": 0.022581505647558803,
+      "exact_center_field_t_per_a": -3.1773075230246043e-12,
+      "exact_circuit_load_w": 5.3602357279955134e-11
+    },
+    {
+      "tx_radius_m": 100,
+      "rx_radius_m": 10,
+      "distance_m": 1000,
+      "mutual_256_h": -9.982951844406738e-10,
+      "mutual_512_h": -9.982951844406486e-10,
+      "dipole_mutual_h": -9.869604401089357e-10,
+      "quadrature_relative_change": 2.5272092940129052e-14,
+      "dipole_relative_error": 0.01135410097972555,
+      "exact_center_field_t_per_a": -3.1773075230246043e-12,
+      "exact_circuit_load_w": 5.239181638708199e-14
+    },
+    {
+      "tx_radius_m": 100,
+      "rx_radius_m": 100,
+      "distance_m": 10000,
+      "mutual_256_h": -9.87182564054164e-11,
+      "mutual_512_h": -9.87182564054164e-11,
+      "dipole_mutual_h": -9.869604401089358e-11,
+      "quadrature_relative_change": 0.0,
+      "dipole_relative_error": 0.0002250079704771405,
+      "exact_center_field_t_per_a": -3.141946119582586e-15,
+      "exact_circuit_load_w": 5.1231899139960594e-17
+    },
+    {
+      "tx_radius_m": 100,
+      "rx_radius_m": 100,
+      "distance_m": 500,
+      "mutual_256_h": -8.689958570573745e-07,
+      "mutual_512_h": -8.689958570573744e-07,
+      "dipole_mutual_h": -7.895683520871486e-07,
+      "quadrature_relative_change": 1.2184076316004461e-16,
+      "dipole_relative_error": 0.09140147714764273,
+      "exact_center_field_t_per_a": -2.631284390544141e-11,
+      "exact_circuit_load_w": 3.969912319306013e-09
+    },
+    {
+      "tx_radius_m": 300,
+      "rx_radius_m": 100,
+      "distance_m": 1500,
+      "mutual_256_h": -2.7705014654017907e-07,
+      "mutual_512_h": -2.770501465401792e-07,
+      "dipole_mutual_h": -2.631894506957162e-07,
+      "quadrature_relative_change": 3.821658993110564e-16,
+      "dipole_relative_error": 0.050029556084182844,
+      "exact_center_field_t_per_a": -8.770947968480466e-12,
+      "exact_circuit_load_w": 1.34505801504465e-10
+    }
+  ]
+}
