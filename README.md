@@ -15,6 +15,12 @@ Nicholas D. Perry · Council Bluffs, Iowa · nick@perrybrandsllc.com
 [![License](https://img.shields.io/badge/license-Research-blue.svg)](LICENSE)
 [![Python](https://img.shields.io/badge/python-3.10%2B-blue.svg)](https://www.python.org/)
 
+![Concept mockup of a solar-powered orbital transmitter directing an optical power link toward a lunar science station](paper_figs/lunar_power_orbit_mockup.png)
+
+*Power across lunar night. An orbital optical-charging concept explored in the
+[energy-delivery review](paper/ENERGY_DELIVERY_REVIEW_2026-09-05.md). Artist's concept;
+the infrared beam is visualized and the geometry is illustrative.*
+
 ## Review status — 2026-09-05
 
 An [adversarial model audit](paper/MODEL_AUDIT_2026-09-05.md) found that the
@@ -33,6 +39,15 @@ for far-side instruments during lunar night. It includes independent loop
 integration on Jellyfin and explicit power, storage, aperture and heat budgets.
 The most promising development target is a 50 W night-survival service with
 scheduled optical charging; its orbit availability remains to be established.
+
+### At the receiving end
+
+![Hardware concept mockup of a lunar station with a gimballed photovoltaic receiver, insulated electronics and battery enclosure](paper_figs/lunar_power_receiver_mockup.png)
+
+*A surface station receives optical energy, stores it between passes, and powers
+its science payload through darkness. Concept mockup of the receiver and storage
+architecture; flight hardware and service availability remain to be established.
+[Image provenance and prompts](paper_figs/CONCEPT_MOCKUPS.md).*
 
 ---
 
