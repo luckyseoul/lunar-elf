@@ -1,0 +1,125 @@
+{
+  "baseline_git_sha": "d939c36609a36295d0f3819187baaba95fdcd545",
+  "host": "soulkiller",
+  "python": "3.14.4",
+  "numpy": "2.4.4",
+  "scipy": "1.17.1",
+  "source_sha256": {
+    "src/lunar_elf/__init__.py": "ba19e2f00556bfdfc449b6cd5751dabeb71b8afca0c03ca85f44cf246266ba87",
+    "src/lunar_elf/constants.py": "29e54d908aa1a476c527ad55dedc4b5d7f933fb9b366a4a01771cc54962d0e59",
+    "src/lunar_elf/lateral.py": "74979b29e8fd871c155dbd7056436b0931ad4426a59a521baecb848bfdbd2162",
+    "src/lunar_elf/literature_profiles.py": "2c42f58835a1e06b169a81cf126e2220414f76520b81c89e80d8da188c8c6053",
+    "src/lunar_elf/profiles.py": "785acbec6c5f596cac647ff127285728fe2a4c3a402274baa7448dd241b09c70",
+    "src/lunar_elf/skin.py": "0c41e58132d77436b98fa102fdb09dcd897859fa1b9a28f758ad6572a2b3acc1",
+    "src/lunar_elf/sphere/__init__.py": "2e968f510c43571dbba3f66033555b75bdeacbc3ee0cc66369aaeb16391024a8",
+    "src/lunar_elf/sphere/cavity.py": "24e1464bfae6f7f9099e3ff18097fbfdddaf369650bc4ab1f8dee5d294239893",
+    "src/lunar_elf/sphere/eigenmodes.py": "26ffcf2a0dd38759636c9df7514a9bcd48ef886380cb167adaee774a2671f382",
+    "src/lunar_elf/sphere/energy_q.py": "d2fdf7de249fc8a70613cb618bfe8e5601d943d9781dc1288dc3888292dcbd17",
+    "src/lunar_elf/sphere/impedance.py": "badea2a68d3f61a1d063de2130ee5abfebbcd7679d40e8b52d8f4214d012b74f",
+    "src/lunar_elf/sphere/layers.py": "b27487467428e1dbc1aae9cd4a0da65a41ce78b6703fb4066d0fde5f38d3659b",
+    "src/lunar_elf/sphere/transfer.py": "db460a90cc1e690aa7daefe2b44c90b6c65384c64aa00fd25b28e1248e859ac9",
+    "src/lunar_elf/validate/__init__.py": "ca6c86092cac280aebe303ee7045438c3fb0d9936982469752e15259c6e1d809"
+  },
+  "named_profiles": [
+    {
+      "profile": "optimistic_cold",
+      "sigma_eff_unweighted_S_m": 1.2779815466351353e-08,
+      "sigma_depth_weighted_log_mean_S_m": 5.0525861223885536e-08,
+      "depth_mean_over_sample_mean": 3.953567354467498,
+      "loss_tangent_30Hz": 1.9143208890814911,
+      "reported_path_Q_upper_10Hz": 0.3459938303877211,
+      "same_material_beta_over_2alpha_10Hz": 0.6338429380915764,
+      "reported_cavity_Q": 0.34772388252167813,
+      "reported_eigenfrequency_real_Hz": 11.651377406226251,
+      "scan_lower_boundary_Hz": 11.651377406226251,
+      "eigenfrequency_is_scan_boundary": true,
+      "method": "impedance_Q=0.3477; spectral_FWHM_Q=0.7055; f_peak=11.651"
+    },
+    {
+      "profile": "nominal",
+      "sigma_eff_unweighted_S_m": 1.312274579144282e-07,
+      "sigma_depth_weighted_log_mean_S_m": 6.251023711283537e-07,
+      "depth_mean_over_sample_mean": 4.76350286032345,
+      "loss_tangent_30Hz": 14.295922109251391,
+      "reported_path_Q_upper_10Hz": 0.10797377566222058,
+      "same_material_beta_over_2alpha_10Hz": 0.5117942345652315,
+      "reported_cavity_Q": 0.5767886759206716,
+      "reported_eigenfrequency_real_Hz": 11.651377406226251,
+      "scan_lower_boundary_Hz": 11.651377406226251,
+      "eigenfrequency_is_scan_boundary": true,
+      "method": "impedance_Q=0.5768; spectral_FWHM_Q=0.5409; f_peak=11.651"
+    },
+    {
+      "profile": "apollo_classic",
+      "sigma_eff_unweighted_S_m": 6.257003790878113e-08,
+      "sigma_depth_weighted_log_mean_S_m": 2.1335959810766037e-07,
+      "depth_mean_over_sample_mean": 3.4099323771980217,
+      "loss_tangent_30Hz": 7.49801941442884,
+      "reported_path_Q_upper_10Hz": 0.15636784002203702,
+      "same_material_beta_over_2alpha_10Hz": 0.525048390976494,
+      "reported_cavity_Q": 0.44380712961977303,
+      "reported_eigenfrequency_real_Hz": 11.651377406226251,
+      "scan_lower_boundary_Hz": 11.651377406226251,
+      "eigenfrequency_is_scan_boundary": true,
+      "method": "impedance_Q=0.4438; spectral_FWHM_Q=0.5596; f_peak=11.651"
+    },
+    {
+      "profile": "pessimistic_warm",
+      "sigma_eff_unweighted_S_m": 1.2072346875977952e-05,
+      "sigma_depth_weighted_log_mean_S_m": 3.1967763751545406e-05,
+      "depth_mean_over_sample_mean": 2.64801567416491,
+      "loss_tangent_30Hz": 1033.3413595288253,
+      "reported_path_Q_upper_10Hz": 0.011257314345887708,
+      "same_material_beta_over_2alpha_10Hz": 0.5001267431860376,
+      "reported_cavity_Q": 2.0080656063178517,
+      "reported_eigenfrequency_real_Hz": 11.651377406226251,
+      "scan_lower_boundary_Hz": 11.651377406226251,
+      "eigenfrequency_is_scan_boundary": true,
+      "method": "impedance_Q=2.008; spectral_FWHM_Q=0.3381; f_peak=11.651"
+    }
+  ],
+  "sampling_invariance": {
+    "uniform_grid_sigma_eff": 9.999999999999987e-07,
+    "surface_dense_sigma_eff": 2.089296130854043e-07,
+    "exact_depth_log_mean": 1e-06
+  },
+  "tem_energy_balance": {
+    "f_Hz": 10,
+    "height_m": 100000.0,
+    "ground_R_ohm": 0.01,
+    "upper_R_ohm": 0.01,
+    "Q_from_total_energy_and_wall_loss": 394.78417604357435,
+    "Q_repository": 197.39208802178715
+  },
+  "known_lorentzian_amplitude": {
+    "true_half_power_Q": 100,
+    "repository_fit": {
+      "f0_hz": 10.0,
+      "fwhm_hz": 0.1732050824972564,
+      "Q": 57.73502633883969,
+      "peak_height": 1.0
+    }
+  },
+  "characteristic_ionosphere_sensitivity": {
+    "sigma_iono_pair_S_m": [
+      1e-08,
+      0.01
+    ],
+    "chi_pair": [
+      [
+        1.1063936445981637e-05,
+        2.863726310349323e-09
+      ],
+      [
+        1.1063936445981637e-05,
+        2.863726310349323e-09
+      ]
+    ],
+    "identical": true
+  },
+  "complex_frequency_characteristic": "TypeError: float() argument must be a string or a real number, not 'complex'",
+  "geometric_spreading_10_to_90_deg": {
+    "physical_cylindrical_field_change_dB": -7.603297699883996,
+    "script_plotted_contribution_dB": 7.603297699883996
+  }
+}

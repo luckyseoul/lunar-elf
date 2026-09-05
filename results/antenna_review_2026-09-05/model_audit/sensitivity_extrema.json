@@ -1,0 +1,25 @@
+{
+  "source": "results/campaign/iono_sensitivity.csv",
+  "sha256": "d1ef1aa38b0b1dbcb7c1eb68f251882b10fd585110a1692f9fc3264bace5dc9e",
+  "rows": 972,
+  "max_all_modes": {
+    "profile": "pessimistic_warm",
+    "h_km": "200.0",
+    "sigma_iono": "0.001",
+    "n": "3",
+    "f_hz": "95.13309815282291",
+    "Q": "11.626608340129136",
+    "Re_Zg": "5.847693089752086",
+    "Re_Zi": "0.6128396245231282"
+  },
+  "max_n1": {
+    "profile": "pessimistic_warm",
+    "h_km": "200.0",
+    "sigma_iono": "0.001",
+    "n": "1",
+    "f_hz": "38.83792468742084",
+    "Q": "7.480574965848269",
+    "Re_Zg": "3.707741018637186",
+    "Re_Zi": "0.391569038935955"
+  }
+}

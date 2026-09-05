@@ -1,0 +1,100 @@
+FFFFFF                                                                   [100%]
+=================================== FAILURES ===================================
+__________ test_thin_cavity_q_matches_independent_tem_energy_balance ___________
+
+    @pytest.mark.xfail(strict=True, reason="M2: cavity wall formula omits half the total stored energy")
+    def test_thin_cavity_q_matches_independent_tem_energy_balance():
+        f, height, ground_R, upper_R = 10., 1e5, .01, .01
+        stored_energy_per_area = MU0 * height / 2  # peak magnetic field 1 A/m
+        wall_power_per_area = (ground_R + upper_R) / 2
+        expected = 2 * np.pi * f * stored_energy_per_area / wall_power_per_area
+        actual = cavity_q_from_impedances(f, height, ground_R, upper_R)["Q"]
+>       assert actual == pytest.approx(expected)
+E       assert 197.39208802178715 == 394.78417604357435 ± 3.9e-04
+E
+E         comparison failed
+E         Obtained: 197.39208802178715
+E         Expected: 394.78417604357435 ± 3.9e-04
+
+tests/test_adversarial_models.py:34: AssertionError
+______ test_claimed_path_q_bound_contains_same_material_propagation_ratio ______
+
+    @pytest.mark.xfail(strict=True, reason="M3: dielectric phase constant cannot upper-bound conductive beta/(2 alpha)")
+    def test_claimed_path_q_bound_contains_same_material_propagation_ratio():
+        f, sigma, eps_r = 10., 1e-5, 5.5
+        k = k_complex(2 * np.pi * f, sigma, eps_r)
+        claimed_upper = path_q_proxy(sigma, f, 1e6, eps_r)["Q_path_upper"]
+>       assert claimed_upper >= k.real / (-2 * k.imag)
+E       assert 0.012368887690789844 >= (1.9872216537135382e-05 / (-2 * -1.986613699110201e-05))
+E        +  where 1.9872216537135382e-05 = (1.9872216537135382e-05-1.986613699110201e-05j).real
+E        +  and   -1.986613699110201e-05 = (1.9872216537135382e-05-1.986613699110201e-05j).imag
+
+tests/test_adversarial_models.py:42: AssertionError
+________ test_effective_sigma_invariant_under_exact_profile_resampling _________
+
+    @pytest.mark.xfail(strict=True, reason="M4: shell log mean weights sample count instead of physical depth")
+    def test_effective_sigma_invariant_under_exact_profile_resampling():
+        def profile(z):
+            z = np.asarray(z) * 3e5
+            return ConductivityProfile("same", "same log-linear profile", (3e5 - z)[::-1],
+                                       np.exp(np.log(1e-8) + z / 3e5 * np.log(1e4))[::-1],
+                                       np.full(len(z), 5.5), 3e5)
+        coarse = profile([0, .5, 1])
+        dense_surface = profile([0, .05, .1, .5, 1])
+>       assert effective_shell_sigma(coarse) == pytest.approx(effective_shell_sigma(dense_surface))
+E       assert 9.999999999999987e-07 == 2.08929613085...e-07 ± 1.0e-12
+E
+E         comparison failed
+E         Obtained: 9.999999999999987e-07
+E         Expected: 2.089296130854043e-07 ± 1.0e-12
+
+tests/test_adversarial_models.py:54: AssertionError
+_________ test_eigenmode_diagnostic_rejects_unbracketed_scan_endpoint __________
+
+    @pytest.mark.xfail(strict=True, reason="M1: monotonic wall admittance endpoint is reported as an eigenmode")
+    def test_eigenmode_diagnostic_rejects_unbracketed_scan_endpoint():
+        try:
+            mode = find_mode_real_axis_q(profile_homogeneous(), 1, f_span=(5, 60))
+        except ValueError:
+            return  # valid future behavior: explicitly reject missing resonance
+>       assert 5 < mode.f_hz.real < 60
+E       AssertionError: assert 5 < 5.0
+E        +  where 5.0 = (5-7.626050420168067j).real
+E        +    where (5-7.626050420168067j) = EigenMode(n=1, f_hz=(5-7.626050420168067j), Q=0.33941181235291207, residual=0.04575637305232772, method='impedance_Q=0.3394; spectral_FWHM_Q=0.3278; f_peak=5.000').f_hz
+
+tests/test_adversarial_models.py:63: AssertionError
+____________ test_amplitude_lorentzian_recovers_known_half_power_q _____________
+
+    @pytest.mark.xfail(strict=True, reason="M5: amplitude FWHM uses half amplitude instead of half power")
+    def test_amplitude_lorentzian_recovers_known_half_power_q():
+        frequencies = np.linspace(9, 11, 40001)
+        amplitude = 1 / np.sqrt(1 + (200 * (frequencies / 10 - 1))**2)
+        fit = estimate_q_from_spectrum(frequencies, amplitude, n_peaks=1)[0]
+>       assert fit["Q"] == pytest.approx(100, rel=.001)
+E       assert 57.73502633883969 == 100 ± 0.1
+E
+E         comparison failed
+E         Obtained: 57.73502633883969
+E         Expected: 100 ± 0.1
+
+tests/test_adversarial_models.py:71: AssertionError
+________ test_cavity_characteristic_responds_to_upper_wall_conductivity ________
+
+    @pytest.mark.xfail(strict=True, reason="M6: computed ionosphere impedance is unused in characteristic")
+    def test_cavity_characteristic_responds_to_upper_wall_conductivity():
+        profile = profile_homogeneous(sigma=1e-10)
+        low = cavity_characteristic(profile, 1, 10, sigma_iono=1e-8)
+        high = cavity_characteristic(profile, 1, 10, sigma_iono=1e-2)
+>       assert abs(low - high) > 1e-12
+E       assert np.float64(0.0) > 1e-12
+E        +  where np.float64(0.0) = abs((np.complex128(1.1063936445981637e-05+2.863726310349323e-09j) - np.complex128(1.1063936445981637e-05+2.863726310349323e-09j)))
+
+tests/test_adversarial_models.py:79: AssertionError
+=========================== short test summary info ============================
+FAILED tests/test_adversarial_models.py::test_thin_cavity_q_matches_independent_tem_energy_balance
+FAILED tests/test_adversarial_models.py::test_claimed_path_q_bound_contains_same_material_propagation_ratio
+FAILED tests/test_adversarial_models.py::test_effective_sigma_invariant_under_exact_profile_resampling
+FAILED tests/test_adversarial_models.py::test_eigenmode_diagnostic_rejects_unbracketed_scan_endpoint
+FAILED tests/test_adversarial_models.py::test_amplitude_lorentzian_recovers_known_half_power_q
+FAILED tests/test_adversarial_models.py::test_cavity_characteristic_responds_to_upper_wall_conductivity
+6 failed in 1.08s

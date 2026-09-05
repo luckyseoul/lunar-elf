@@ -15,6 +15,17 @@ Nicholas D. Perry · Council Bluffs, Iowa · nick@perrybrandsllc.com
 [![License](https://img.shields.io/badge/license-Research-blue.svg)](LICENSE)
 [![Python](https://img.shields.io/badge/python-3.10%2B-blue.svg)](https://www.python.org/)
 
+## Review status — 2026-09-05
+
+An [adversarial model audit](paper/MODEL_AUDIT_2026-09-05.md) found that the
+reported eigenmode cross-check reuses the wall-impedance proxy, the cavity-Q
+formula fails a weak-loss energy-balance benchmark, and several claimed bounds
+need narrower scope. The historical results below remain available for
+reproduction; they are **not validated antenna efficiencies or rigorous global
+power-transfer bounds**. Six strict expected-failure tests document unresolved
+model defects. The audit includes matching numerical replays on soulkiller and
+NUKA. Production calculations and the original manuscript have been preserved.
+
 ---
 
 ## Headline Results
