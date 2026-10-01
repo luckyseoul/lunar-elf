@@ -1,8 +1,8 @@
-# Sources for the claims-correction draft
+# Sources for the claim corrections
 
-Retrieved 2026-10-01 from `https://raw.githubusercontent.com/luckyseoul/lunar-elf/main/<path>` at `main` commit `8aa7940863de40c6eb71b1cf34ba37a1127ef260` (API committer timestamp `2026-09-05T12:59:04Z`, 7:59 AM CT). Local copies used for line numbers: `/workspace/lunar-elf/sources/`. No file in the must-read list failed to download. `paper/ENERGY_DELIVERY_REVIEW_2026-09-05.md` was not read; loop-power claims from that review are not used.
+Sources retrieved 2026-10-01 from `https://raw.githubusercontent.com/luckyseoul/lunar-elf/main/<path>` at `main` commit `8aa7940863de40c6eb71b1cf34ba37a1127ef260` (committer timestamp `2026-09-05T12:59:04Z`, 7:59 AM CT). Line numbers refer to the files at that commit. `paper/ENERGY_DELIVERY_REVIEW_2026-09-05.md` is not a source for these corrections; loop-power claims from that review are not used.
 
-Line numbers below refer to those retrieved files. Quotes are the sentences the draft relies on. Replacement numbers appear only in the audit quotes or in the claim-file quotes, not from memory.
+Line numbers below refer to those files. Quotes are the sentences used in the claim corrections. Numerical replacements appear only in the audit quotes or in the claim-file quotes.
 
 ---
 
@@ -76,7 +76,7 @@ Conclusion (lines 5–7):
 
 > High antenna resonance `Q`, high planetary-cavity `Q`, low bulk attenuation, and high end-to-end DC efficiency are different quantities. The current evidence neither demonstrates a practical global ELF power system nor prohibits all lunar wireless power.
 
-The audit does not quote the headline set “median Q≈0.78, max Q≈2.0, 100% Q<5, named Q 0.35/0.58/0.44/2.01” as its own measurements. Those digits are taken from the claim files below and, per the task statement confirmed by M7’s scope sentence, may be kept only as historical proxy outputs at `h=100 km` and `sigma_iono=1e-5 S/m`.
+The audit does not quote the headline set “median Q≈0.78, max Q≈2.0, 100% Q<5, named Q 0.35/0.58/0.44/2.01” as its own measurements. Those digits are taken from the claim files below and, consistent with the scope stated in M7, are historical proxy outputs only at `h=100 km` and `sigma_iono=1e-5 S/m`.
 
 ---
 
@@ -248,7 +248,7 @@ Monte Carlo block (lines 5–16):
 
 > Interpretation: across the literature-bracketed envelope, high-Q global modes (Q≳10) are essentially absent under Model B; the physical open Moon (Model A) has no cavity at all.
 
-Named n = 1 Q (lines 22–31): apollo_classic `0.444`, nominal `0.577`, optimistic_cold `0.348`, pessimistic_warm `2.01`. pessimistic_warm n = 3 Q is `3.11` (line 33), which is not the same print as quantitative `3.12`. The draft does not pick a winner.
+Named n = 1 Q (lines 22–31): apollo_classic `0.444`, nominal `0.577`, optimistic_cold `0.348`, pessimistic_warm `2.01`. pessimistic_warm n = 3 Q is `3.11` (line 33), which is not the same print as quantitative `3.12`. Both prints are retained.
 
 This file does not state `sigma_iono`. The \(1\times 10^{-5}\) S/m scope is taken from the M7 quote above, not from this report.
 
@@ -268,7 +268,7 @@ This file does not state `sigma_iono`. The \(1\times 10^{-5}\) S/m scope is take
 
 > | grimm_lf_preferred | 1 | 0.781 | impedance_Q=0.7814; spectral_FWHM_Q=0.8114; f_peak=11.651… |
 
-Every n = 1 row in lines 20–40 ends with `f_peak=11.651…`. n = 2 rows print `f_peak=20.181…`; n = 3 rows print `f_peak=28.540…`. The draft quotes those strings and does not assert they equal `0.3*f_n`; only the fundamental identity 11.6513774062 Hz = `0.3*f_ideal` is in the audit.
+Every n = 1 row in lines 20–40 ends with `f_peak=11.651…`. n = 2 rows print `f_peak=20.181…`; n = 3 rows print `f_peak=28.540…`. Those strings are quoted as printed and are not identified with `0.3*f_n`; only the fundamental identity 11.6513774062 Hz = `0.3*f_ideal` is in the audit.
 
 Regional Q and paths (lines 46–67):
 
