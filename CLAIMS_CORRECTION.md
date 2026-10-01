@@ -1,8 +1,8 @@
-# Claims correction draft (review only)
+# Corrections to the cavity-Q and path claims
 
-This is a review replacement for Nicholas D. Perry, not a published revision. It lists paste-ready wording for overstated claims in the manuscript, the quantitative appendices, the optional report, and the README headline, Model B, and historical-outcome sections of `luckyseoul/lunar-elf`. This file is on `main` of `luckyseoul/lunar-elf` as a review draft. It is not a published revision of the manuscript.
+Corrected wording for overstated claims in the manuscript (`paper/paper.html`), the quantitative appendices, the optional report, and the README headline, Model B, and historical-outcome sections of `luckyseoul/lunar-elf`. The manuscript and the README are not rewritten here.
 
-Numbers below are copied from files read at `main` commit `8aa7940863de40c6eb71b1cf34ba37a1127ef260`. Audit figures are from `paper/MODEL_AUDIT_2026-09-05.md`. Do not double the lunar Q tables. A weak-loss energy balance is twice the repository formula only inside the perturbative check; Q of order 1 is outside that regime, and the lossy wall also shifts frequency and stored energy.
+Figures are taken from the repository at commit `8aa7940863de40c6eb71b1cf34ba37a1127ef260` and from `paper/MODEL_AUDIT_2026-09-05.md`. The lunar Q tables are not doubled. A weak-loss energy balance is twice the repository formula only inside the perturbative check; Q of order 1 is outside that regime, and the lossy wall also shifts frequency and stored energy.
 
 Replacement count: **32**.
 
@@ -36,7 +36,7 @@ Replacement count: **32**.
 
 ### 4. §3 paragraph above Table 1, and Table 1 caption
 
-**Wrong:** half-circumference attenuations "show that shell-guided global standing waves are not viable," and \(\sigma_\mathrm{eff}\) is presented as though the unweighted log mean were a unique shell conductivity. Findings: M0 (bulk path diagnostic, not a link budget; a through-rock path does not rule out other coupling); M4 (sample-count log mean is tabulation-dependent). Table 1 rounds `paper/OPTIONAL_REPORT.md` (for example Grimm LF \(1.38\times 10^{-7}\) S/m to \(1.4\times 10^{-7}\)). No depth-weighted replacement for those four literature profiles was in the files read. Do not invent one. The factor 2.65–4.76 applies only to the four named synthetic profiles in the audit.
+**Wrong:** half-circumference attenuations "show that shell-guided global standing waves are not viable," and \(\sigma_\mathrm{eff}\) is presented as though the unweighted log mean were a unique shell conductivity. Findings: M0 (bulk path diagnostic, not a link budget; a through-rock path does not rule out other coupling); M4 (sample-count log mean is tabulation-dependent). Table 1 rounds `paper/OPTIONAL_REPORT.md` (for example Grimm LF \(1.38\times 10^{-7}\) S/m to \(1.4\times 10^{-7}\)). No depth-weighted conductivity for those four literature profiles is given in the files cited here. The factor 2.65–4.76 applies only to the four named synthetic profiles in the audit.
 
 **Replacement:**
 
@@ -64,13 +64,13 @@ Table 1 caption, replace the present caption with:
 >
 > \(Q_\mathrm{repo}\approx\omega\mu_0 h/[2\,\mathrm{Re}(Z_g+Z_i)]\). (3)
 >
-> For peak phasors in a thin vacuum TEM cavity the weak-loss energy balance is \(Q=\omega\mu_0 h/(R_g+R_i)\), without the extra 2. At \(f=10\) Hz, \(h=100\) km, and \(R_g=R_i=0.01\,\Omega\), that balance is 394.784176 and the repository returns 197.392088. Galejs' one-lossy-wall reduction at the ideal PEC frequency is \(Q=\omega\mu_0 h/\mathrm{Re}(Z_s)\) (Galejs, 1965, as cited in the 2026-09-05 audit). Do not replace the lunar tables by twice these numbers. The proxy is perturbative, and a result of order 1 is outside that regime: the lossy boundary also shifts frequency and stored energy. The Earth stack (Model C) uses the same proxy — printed \(Q=3.69\), 4.85, and 5.77 for \(n=1,2,3\) — and does not independently validate it.
+> For peak phasors in a thin vacuum TEM cavity the weak-loss energy balance is \(Q=\omega\mu_0 h/(R_g+R_i)\), without the extra 2. At \(f=10\) Hz, \(h=100\) km, and \(R_g=R_i=0.01\,\Omega\), that balance is 394.784176 and the repository returns 197.392088. Galejs' one-lossy-wall reduction at the ideal PEC frequency is \(Q=\omega\mu_0 h/\mathrm{Re}(Z_s)\) (Galejs, 1965, as cited in the 2026-09-05 audit). The lunar tables are not replaced by twice these numbers. The proxy is perturbative, and a result of order 1 is outside that regime: the lossy boundary also shifts frequency and stored energy. The Earth stack (Model C) uses the same proxy — printed \(Q=3.69\), 4.85, and 5.77 for \(n=1,2,3\) — and does not independently validate it.
 
-Keep the ideal-frequency sentence \(f_1\approx 38.8\) Hz and the statement that the physical Moon has no dense conducting ionosphere. Those are not the defect.
+The ideal-frequency sentence \(f_1\approx 38.8\) Hz and the statement that the physical Moon has no dense conducting ionosphere are unchanged. Those statements are not the defect.
 
 ### 7. Table 2 caption
 
-**Wrong:** "Primary metric: impedance method (Eq. 3)" presented as Model B cavity \(Q\). Findings: M2; M1 if read as an eigenmode; M7 for scope. Table body digits may stay as historical proxy outputs. Within the synthetic suite, "\(Q\lesssim 2\)" is already false for pessimistic_warm at \(n=2\) and \(n=3\): `paper/QUANTITATIVE_RESULTS.md` prints 2.63 and 3.12 (the campaign file prints 3.11 for \(n=3\)).
+**Wrong:** "Primary metric: impedance method (Eq. 3)" presented as Model B cavity \(Q\). Findings: M2; M1 if read as an eigenmode; M7 for scope. Table body digits remain historical proxy outputs. Within the synthetic suite, "\(Q\lesssim 2\)" is already false for pessimistic_warm at \(n=2\) and \(n=3\): `paper/QUANTITATIVE_RESULTS.md` prints 2.63 and 3.12 (the campaign file prints 3.11 for \(n=3\)).
 
 **Replacement caption:**
 
@@ -94,7 +94,7 @@ Keep the ideal-frequency sentence \(f_1\approx 38.8\) Hz and the statement that 
 
 ### 10. §4.1 Monte Carlo, including "No high-\(Q\) island appears in the envelope."
 
-**Wrong:** the draw statistics are reported as Model B cavity \(Q\) and as the absence of a high-\(Q\) island. Findings: M2; M7; historical-scope note. Manuscript digits, not the campaign file's extra precision: median 0.78, percentiles 0.30 and 1.85, maximum 2.01, 100% below 5, 65% below 1. Campaign file prints median 0.778, p05 0.295, and 64.7% below 1. Do not mix the two roundings in one sentence.
+**Wrong:** the draw statistics are reported as Model B cavity \(Q\) and as the absence of a high-\(Q\) island. Findings: M2; M7; historical-scope note. Manuscript digits, not the campaign file's extra precision: median 0.78, percentiles 0.30 and 1.85, maximum 2.01, 100% below 5, 65% below 1. Campaign file prints median 0.778, p05 0.295, and 64.7% below 1. The two roundings are not combined in one sentence.
 
 **Replacement:**
 
@@ -177,7 +177,7 @@ Item 3 (literature-bracketed synthetics) stays.
 
 **Replacement note, placed under the Phase 0 table in place of any upper-bound reading of the last column:**
 
-> Rename the last column from "Q_path ≲" to "inconsistent \(\beta/(2\alpha)\)" or drop it. It is not an upper bound. At 10 Hz the audit evaluates that claimed upper value as 0.1079738 (nominal; this table prints 0.108) against the repository's own material wavenumber \(\mathrm{Re}(k)/[-2\,\mathrm{Im}(k)]=0.5117942\), and 0.0112573 (warm) against 0.5001267. The Model A block prints the warm 10 Hz entry as 0.0113; this Phase 0 block prints 0.0127. Do not force those two printed cells to one rounded value. A larger assumed phase speed makes \(\beta/(2\alpha)\) smaller, so the inequality does not run the way an upper bound would. The ratio is not a temporal eigenmode \(Q\) and not an antenna efficiency.
+> Rename the last column from "Q_path ≲" to "inconsistent \(\beta/(2\alpha)\)" or drop it. It is not an upper bound. At 10 Hz the audit evaluates that claimed upper value as 0.1079738 (nominal; this table prints 0.108) against the repository's own material wavenumber \(\mathrm{Re}(k)/[-2\,\mathrm{Im}(k)]=0.5117942\), and 0.0112573 (warm) against 0.5001267. The Model A block prints the warm 10 Hz entry as 0.0113; this Phase 0 block prints 0.0127. Those two printed cells are not forced to one rounded value. A larger assumed phase speed makes \(\beta/(2\alpha)\) smaller, so the inequality does not run the way an upper bound would. The ratio is not a temporal eigenmode \(Q\) and not an antenna efficiency.
 >
 > \(\sigma_\mathrm{eff}\) is a sample-count log mean. A log-linear test profile returns \(1.000\times 10^{-6}\) S/m on three uniform depths and \(2.0893\times 10^{-7}\) S/m on five surface-dense depths; the depth-weighted geometric mean is \(1.000\times 10^{-6}\) S/m either way. For the four named profiles the depth-weighted log mean is 2.65–4.76 times the sample-count mean. Nominal \(1.3123\times 10^{-7}\) S/m (printed \(1.31\times 10^{-7}\)) becomes \(6.2510\times 10^{-7}\) S/m. The skin-attenuation proxy scales with the square root of that conductivity ratio. Neither average is an antenna channel.
 >
@@ -197,7 +197,7 @@ Item 3 (literature-bracketed synthetics) stays.
 
 **Replacement:**
 
-> Model B is a hypothetical lid, not the most favorable simple artificial boundary and not an upper bound. The table's \(Q_\mathrm{cavity}\) column is the repository wall proxy at the height and ionospheric conductivity used for this run (the \(Q\sim 2\) campaign maximum belongs to \(h=100\) km and \(\sigma_\mathrm{iono}=1\times 10^{-5}\) S/m, not to every lid). pessimistic_warm in this table is already 2.01, 2.63, and 3.12 for \(n=1,2,3\). Do not summarize the column as \(Q\lesssim 2\). Do not multiply the column by two. Drop "Q_path ≲" or relabel it as the inconsistent \(\beta/(2\alpha)\) ratio (printed here down to 0.0222 on pessimistic_warm, \(n=1\)).
+> Model B is a hypothetical lid, not the most favorable simple artificial boundary and not an upper bound. The table's \(Q_\mathrm{cavity}\) column is the repository wall proxy at the height and ionospheric conductivity used for this run (the \(Q\sim 2\) campaign maximum belongs to \(h=100\) km and \(\sigma_\mathrm{iono}=1\times 10^{-5}\) S/m, not to every lid). pessimistic_warm in this table is already 2.01, 2.63, and 3.12 for \(n=1,2,3\). The column is not summarized as \(Q\lesssim 2\) and is not multiplied by two. "Q_path ≲" is dropped or relabeled as the inconsistent \(\beta/(2\alpha)\) ratio (printed here down to 0.0222 on pessimistic_warm, \(n=1\)).
 
 ### 21. Model C closing sentence
 
@@ -241,7 +241,7 @@ Item 3 (literature-bracketed synthetics) stays.
 
 ### 25. "Named profiles (Model B)" framing
 
-**Wrong:** the table is presented as cavity \(Q\) next to the campaign interpretation. Finding: M2; M7. Printed n = 1 values: apollo_classic 0.444, nominal 0.577, optimistic_cold 0.348, pessimistic_warm 2.01. pessimistic_warm n = 3 is 3.11 in this file (3.12 in `paper/QUANTITATIVE_RESULTS.md`). Leave both prints; do not reconcile them by invention.
+**Wrong:** the table is presented as cavity \(Q\) next to the campaign interpretation. Finding: M2; M7. Printed n = 1 values: apollo_classic 0.444, nominal 0.577, optimistic_cold 0.348, pessimistic_warm 2.01. pessimistic_warm n = 3 is 3.11 in this file (3.12 in `paper/QUANTITATIVE_RESULTS.md`). Both prints are retained and are not reconciled.
 
 **Replacement lead-in:**
 
@@ -253,15 +253,15 @@ Item 3 (literature-bracketed synthetics) stays.
 
 ### 26. §2 "Multipole eigenmode / impedance cross-check"
 
-**Wrong:** the table is an eigenmode cross-check. `spectral_FWHM_Q` is a half-power quality factor. `f_peak=11.651…` on every n = 1 row is a resonance frequency. Findings: M1; M5; do not repair it with the dormant helper (M6). Every n = 1 note in the table prints `f_peak=11.651…`. The audit's fundamental is 11.6513774062 Hz = \(0.3 f_\mathrm{ideal}\). The n = 2 and n = 3 peak strings (20.181…, 28.540…) are the same helper's reported peaks; the audit text certifies the fundamental endpoint, not a separate identity for those two strings, so this draft does not relabel them as \(0.3 f_n\).
+**Wrong:** the table is an eigenmode cross-check. `spectral_FWHM_Q` is a half-power quality factor. `f_peak=11.651…` on every n = 1 row is a resonance frequency. Findings: M1; M5; the dormant helper (M6) is not used to repair it. Every n = 1 note in the table prints `f_peak=11.651…`. The audit's fundamental is 11.6513774062 Hz = \(0.3 f_\mathrm{ideal}\). The n = 2 and n = 3 peak strings (20.181…, 28.540…) are the same helper's reported peaks; the audit text certifies the fundamental endpoint, not a separate identity for those two strings, so they are not relabeled as \(0.3 f_n\).
 
 **Replacement:**
 
 > ## 2. Wall-admittance scan (not an eigenmode cross-check)
 >
-> `find_mode_real_axis_q` does not call the Riccati integrator or the cavity characteristic. It returns the wall-impedance formula as \(Q\). The field named residual is the height of the response, not a characteristic residual near zero. For every named profile the reported fundamental is the scan endpoint 11.6513774062 Hz = \(0.3 f_\mathrm{ideal}\). The n = 1 rows below print that endpoint (`f_peak=11.651…`). A monotonic wall response with an endpoint maximum has no bracketed resonance whose width is a pole. `spectral_FWHM_Q` is a half-amplitude width: a synthetic amplitude Lorentzian with half-power \(Q=100\) returns 57.735026 = \(1/\sqrt{3}\). Do not rescale these lunar rows by \(\sqrt{3}\). There is no bracketed peak to rescale.
+> `find_mode_real_axis_q` does not call the Riccati integrator or the cavity characteristic. It returns the wall-impedance formula as \(Q\). The field named residual is the height of the response, not a characteristic residual near zero. For every named profile the reported fundamental is the scan endpoint 11.6513774062 Hz = \(0.3 f_\mathrm{ideal}\). The n = 1 rows below print that endpoint (`f_peak=11.651…`). A monotonic wall response with an endpoint maximum has no bracketed resonance whose width is a pole. `spectral_FWHM_Q` is a half-amplitude width: a synthetic amplitude Lorentzian with half-power \(Q=100\) returns 57.735026 = \(1/\sqrt{3}\). These lunar rows are not rescaled by \(\sqrt{3}\). There is no bracketed peak to rescale.
 >
-> Do not promote `cavity_characteristic` in place of this table. It computes \(Z_g\) and \(Z_i\) and uses neither. Changing ionospheric conductivity from \(1\times 10^{-8}\) to \(1\times 10^{-2}\) S/m leaves the characteristic unchanged. Calling the complex-frequency function at \(10+0.1j\) Hz raises TypeError. Unused radial-transfer and energy helpers stay unused.
+> `cavity_characteristic` is not used in place of this table. It computes \(Z_g\) and \(Z_i\) and uses neither. Changing ionospheric conductivity from \(1\times 10^{-8}\) to \(1\times 10^{-2}\) S/m leaves the characteristic unchanged. Calling the complex-frequency function at \(10+0.1j\) Hz raises TypeError. Unused radial-transfer and energy helpers stay unused.
 
 The numeric columns may remain only under that relabeling, as diagnostics, not as confirmed \(Q\).
 
@@ -287,7 +287,7 @@ The §1 sentence "HF envelope retained as upper bound only" refers to Grimm's co
 
 ## 5. README.md — headline, historical outcome, Model B
 
-The "Review status — 2026-09-05" section already says the historical results are not validated antenna efficiencies or rigorous global power-transfer bounds. It is left in place. The sections below it still contradict that status and are replaced here. Physics Summary item 2 still says "exploratory upper bound"; that section was outside this pass. If it is edited later, use the Model B sentence in item 31. It is not rewritten here.
+The "Review status — 2026-09-05" section already says the historical results are not validated antenna efficiencies or rigorous global power-transfer bounds. That section is unchanged. The sections below it still contradict that status; corrected wording is given here. Physics Summary item 2 still says "exploratory upper bound" and is not rewritten in this note. The Model B sentence in item 31 is the wording that applies to that item.
 
 ### 29. Headline Results table and the sentence under it
 
@@ -323,7 +323,7 @@ The "Review status — 2026-09-05" section already says the historical results a
 
 > **Outcome of the reverse-engineering:** the calculations that were meant to recover a Tesla-style high-\(Q\) lunar cavity do not. What they actually return is a wall-impedance proxy under one artificial lid, plus bulk path attenuation, not a validated cavity \(Q\), not an antenna efficiency, and not a global upper bound on wireless power. The outer shell remains, on the conductivity diagnostics, a weakly conducting, large-skin-depth medium whose primary scientific value in this repository is geophysical (magnetotelluric / induction sounding). A continuously driven source is a different question from the decay of a free oscillation: the missing quantities are input power, matching, geometry, and received watts. Those are not settled here.
 
-The following sentence ("The code, profiles, and figures document both the original exploratory motivation and the quantitative constraints that closed that path.") overclaims closure. Replace with:
+The sentence "The code, profiles, and figures document both the original exploratory motivation and the quantitative constraints that closed that path." overclaims closure. Corrected wording:
 
 > The code, profiles, and figures document the exploratory motivation and the proxy outputs that failed to support a high-\(Q\) lunar cavity claim. They do not close every lunar wireless-power architecture.
 
@@ -339,7 +339,7 @@ The following sentence ("The code, profiles, and figures document both the origi
 >
 > \(Q_\mathrm{repo}\approx\omega\mu_0 h/[2\,\mathrm{Re}(Z_g+Z_i)]\).
 >
-> This is not the most favorable simple artificial boundary in the repository. `results/campaign/iono_sensitivity.csv`, as audited, already has pessimistic_warm at \(h=200\) km and \(\sigma_\mathrm{iono}=1\times 10^{-3}\) S/m with \(Q=7.480575\) (\(n=1\)) and \(Q=11.626608\) (\(n=3\)). The weak-loss balance is \(Q=\omega\mu_0 h/(R_g+R_i)\). At \(f=10\) Hz, \(h=100\) km, and \(R_g=R_i=0.01\,\Omega\), that balance is 394.784176 and the repository returns 197.392088. Do not "correct" the table below by doubling.
+> This is not the most favorable simple artificial boundary in the repository. `results/campaign/iono_sensitivity.csv`, as audited, already has pessimistic_warm at \(h=200\) km and \(\sigma_\mathrm{iono}=1\times 10^{-3}\) S/m with \(Q=7.480575\) (\(n=1\)) and \(Q=11.626608\) (\(n=3\)). The weak-loss balance is \(Q=\omega\mu_0 h/(R_g+R_i)\). At \(f=10\) Hz, \(h=100\) km, and \(R_g=R_i=0.01\,\Omega\), that balance is 394.784176 and the repository returns 197.392088. The table below is not doubled.
 >
 > Historical n = 1 proxy outputs at ~38.8 Hz for this lid, with \(\tau\approx Q_\mathrm{repo}/(\pi f)\):
 >
@@ -372,18 +372,18 @@ The existing pointer to `paper_figs/fig_iono_sensitivity.png` and `results/campa
 
 ## Leave unchanged
 
-The 2026-09-05 audit does not retract the following. Do not "correct" them in this pass.
+The 2026-09-05 audit does not retract the following. They are unchanged.
 
 - Conductivity profiles as inputs: the Grimm (2023) LF fit \(\sigma=1.76\times 10^{-4}\exp(z_\mathrm{km}/210)\) S/m over ~400–1200 km; the Dyal–Parkin resistive lid (\(\sigma\lesssim 10^{-8}\) S/m for depths \(\lesssim 80\) km); the log-linear bridge; named synthetic envelopes (optimistic / nominal / Apollo-style / pessimistic) and the literature constructions (Mittelholz-like as a constructed envelope, Hood-class resistive shell, regional nearside / farside / PKT variants). The Grimm HF envelope "retained as an upper bound only" because HF is argued to be biased high is a statement about that conductivity envelope, not about shell-path \(Q\).
 - The skin-depth definition \(\delta=\sqrt{2/(\omega\mu\sigma)}\) (manuscript equation 1; README and quantitative method). The illustrative evaluation in the manuscript, \(\delta\approx 500\) km at \(f=10\) Hz and \(\sigma=10^{-7}\) S/m with \(\mu=\mu_0\), is the definition applied to a round conductivity, not the defective \(Q\) bound. Applying \(\delta\) to an unweighted log-mean \(\sigma_\mathrm{eff}\) inherits M4; the definition does not change.
 - The ideal PEC Schumann frequency formula and the printed ideal \(f_1=38.84\) Hz (quantitative results) / \(f_1\approx 38.8\) Hz (manuscript), with \(R=1737.4\) km and \(c=2.997925\times 10^{8}\) m/s. The audit uses \(0.3 f_\mathrm{ideal}\) as a scan endpoint. It does not replace the PEC formula.
 - The statement that the physical Moon has no stable global ionosphere and therefore no closed Earth-like Schumann cavity. What changes is only the identification of code \(Q=0\) with a radiative quality factor.
-- Loss-tangent wording that is already limited to the nominal and Apollo-style envelopes at 1–30 Hz (quantitative terminology note; README loss-tangent figure caption). Do not extend those sentences to optimistic_cold or to "always."
+- Loss-tangent wording that is already limited to the nominal and Apollo-style envelopes at 1–30 Hz (quantitative terminology note; README loss-tangent figure caption). Those sentences are not extended to optimistic_cold or to "always."
 - Manuscript limitations that the audit does not touch: limited vertical resolution in the uppermost 200–300 km; Mittelholz-like curve not digitized from a single figure; Model A is geometric and not a leaky-mode catalog.
 - Paper-ready claims 2 and 5 in `paper/QUANTITATIVE_RESULTS.md`, read as "no closed cavity without an ionosphere" and "present scope is 1-D radial stratification."
-- ELF loop power results in `paper/ENERGY_DELIVERY_REVIEW_2026-09-05.md`. They are not in the manuscript, the quantitative appendix, the campaign report, the optional report, or the README sections rewritten here. This draft does not change them. The README review-status mention of a 50 W night-survival target is outside those sections and is not revised.
+- ELF loop power results in `paper/ENERGY_DELIVERY_REVIEW_2026-09-05.md`. They are not in the manuscript, the quantitative appendix, the campaign report, the optional report, or the README sections rewritten here. They are unchanged here. The README review-status mention of a 50 W night-survival target lies outside those sections and is unchanged.
 - Campaign digits (median 0.778, mean 0.923, p05 0.295, p95 1.85, max 2.01, 64.7% below 1, 100% below 5) and the corresponding manuscript roundings, once they are labeled as historical proxy outputs of the stated lid. The defect is the claim, not a silent rewrite of the histogram.
 
-## Not in this draft
+## Outside these corrections
 
 The night-charging schedule is the separate file `NIGHT_CHARGING_SCHEDULE.md` on the same branch. These replacements have not been applied to the manuscript or the README.
