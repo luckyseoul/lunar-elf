@@ -1,6 +1,6 @@
 # Claims correction draft (review only)
 
-This is a review replacement for Nicholas D. Perry, not a published revision. It lists paste-ready wording for overstated claims in the manuscript, the quantitative appendices, the optional report, and the README headline, Model B, and historical-outcome sections of `luckyseoul/lunar-elf`. Nothing here has been committed, pushed, or opened as a pull request. The user reviews this draft before any public text changes.
+This is a review replacement for Nicholas D. Perry, not a published revision. It lists paste-ready wording for overstated claims in the manuscript, the quantitative appendices, the optional report, and the README headline, Model B, and historical-outcome sections of `luckyseoul/lunar-elf`. This file is on `main` of `luckyseoul/lunar-elf` as a review draft. It is not a published revision of the manuscript.
 
 Numbers below are copied from files read at `main` commit `8aa7940863de40c6eb71b1cf34ba37a1127ef260`. Audit figures are from `paper/MODEL_AUDIT_2026-09-05.md`. Do not double the lunar Q tables. A weak-loss energy balance is twice the repository formula only inside the perturbative check; Q of order 1 is outside that regime, and the lossy wall also shifts frequency and stored energy.
 
@@ -386,4 +386,4 @@ The 2026-09-05 audit does not retract the following. Do not "correct" them in th
 
 ## Not in this draft
 
-The night-charging orbit schedule is a later task and is not drafted. No GitHub commit, push, or pull request was made.
+The night-charging schedule is the separate file `NIGHT_CHARGING_SCHEDULE.md` on the same branch. These replacements have not been applied to the manuscript or the README.
